@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss', '../fonts.css', '../styles.css'],
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'tina-joelly';
 }
