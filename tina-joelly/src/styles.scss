@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+$lightgrey: #d9d9d9;
+$background: #292929;
+$primary: #3dcfb6;
+$darkgradient: #1c1c1c;
+$greengradient: #08463b;
+
+* {
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 128px;
+  text-align: center;
+  color: $lightgrey;
+  letter-spacing: -2%;
+  line-height: 100%;
+}
+
+h3 {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  color: $lightgrey;
+  letter-spacing: 0%;
+  line-height: 100%;
+}
+
+p {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  color: $lightgrey;
+  letter-spacing: 0%;
+  line-height: 120%;
+}
