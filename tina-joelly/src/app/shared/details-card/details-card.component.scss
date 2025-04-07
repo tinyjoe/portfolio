@@ -1,0 +1,9 @@
+@import "colors";
+
+div {
+  border: solid 1px $primary;
+  background-color: $primary;
+  backdrop-filter: blur(4px);
+  padding: 32px;
+  border-radius: 30px;
+}
