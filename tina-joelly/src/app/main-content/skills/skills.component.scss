@@ -1,8 +1,28 @@
+@import "colors";
+
 section {
   display: flex;
-  width: 100vw;
   height: 100vh;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 0px 100px;
+}
+
+.skill-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skill-items-container {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   gap: 50px;
+  flex-wrap: wrap;
 }

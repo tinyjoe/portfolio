@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DetailsCardComponent } from '../../shared/details-card/details-card.component';
 import { DetailIconItemComponent } from '../../shared/detail-icon-item/detail-icon-item.component';
+import { PortfolioDataService } from '../../model/portfolio-data.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,4 +10,6 @@ import { DetailIconItemComponent } from '../../shared/detail-icon-item/detail-ic
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss', '../../../styles.scss'],
 })
-export class AboutMeComponent {}
+export class AboutMeComponent {
+  myDetailsData = inject(PortfolioDataService);
+}

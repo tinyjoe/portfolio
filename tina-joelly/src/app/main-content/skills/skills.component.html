@@ -1,3 +1,27 @@
 <section>
-  <h2>skills works!</h2>
+  <div class="skill-card-container">
+    <p class="column-title">Technologies</p>
+    <app-details-card
+      [width]="'500px'"
+      title="Skillset"
+      description="A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development."
+    >
+      <div>
+        <h4>You need <span>another skill?</span></h4>
+        <p class="small-print">
+          Feel free to contact me. I look forward to expanding on my previous
+          knowledge.
+        </p>
+      </div>
+      <app-main-button title="Let's talk"></app-main-button>
+    </app-details-card>
+  </div>
+  <div class="skill-items-container">
+    @for(skill of skills.skillsList; track skill.title){
+    <app-skills-item
+      [iconUrl]="skill.iconUrl"
+      [title]="skill.title"
+    ></app-skills-item>
+    }
+  </div>
 </section>

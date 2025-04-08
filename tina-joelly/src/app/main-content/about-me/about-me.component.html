@@ -5,7 +5,17 @@
   </div>
   <div class="my-details-container">
     <p class="column-title">Who I am</p>
-    <app-details-card [title]="'About me'"></app-details-card>
-    <app-detail-icon-item></app-detail-icon-item>
+    <app-details-card
+      [width]="'500px'"
+      title="About me"
+      description="Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?"
+    >
+      @for(item of myDetailsData.myDetailsList; track item.iconUrl){
+      <app-detail-icon-item
+        [iconUrl]="item.iconUrl"
+        [description]="item.description"
+      ></app-detail-icon-item>
+      }
+    </app-details-card>
   </div>
 </section>

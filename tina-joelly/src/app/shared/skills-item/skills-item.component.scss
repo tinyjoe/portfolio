@@ -1,0 +1,26 @@
+.skills-item-container {
+  display: flex;
+  width: 108px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  gap: 25px;
+}
+
+.skills-icon {
+  width: 60px;
+  height: 60px;
+  &:hover {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.subline {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+}
