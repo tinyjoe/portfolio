@@ -2,13 +2,26 @@
 
 div {
   display: flex;
-  width: 100vw;
+  width: 90vw;
+  align-items: center;
+  &:hover {
+    .project-list-container {
+      background-color: #3dcfb64d;
+    }
+    .preview-container {
+      opacity: 1;
+    }
+    img {
+      opacity: 1;
+    }
+  }
 }
 
 .project-list-container {
   display: flex;
   flex-direction: column;
   width: 60%;
+  height: 30px;
   justify-content: space-between;
   border-bottom: 1px solid $primary;
   padding: 40px 32px;
@@ -21,6 +34,40 @@ div {
   justify-content: space-between;
 }
 
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 23px;
+    height: 23px;
+    opacity: 0;
+  }
+}
+
+.tech-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .preview-container {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40%;
+  margin-bottom: -100px;
+  .teaser-img {
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    background-color: $primary;
+  }
+  .teaser-bg {
+    width: 295px;
+    height: 192px;
+    margin-right: -305px;
+    margin-top: 20px;
+    border-radius: 16px;
+  }
 }

@@ -10,12 +10,12 @@
       title="About me"
       description="Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?"
     >
-      @for(item of myDetailsData.myDetailsList; track item.iconUrl){
-      <app-detail-icon-item
-        [iconUrl]="item.iconUrl"
-        [description]="item.description"
-      ></app-detail-icon-item>
-      }
+      <ng-container *ngFor="let item of myDetailsData.myDetailsList">
+        <app-detail-icon-item
+          [iconUrl]="item.iconUrl"
+          [description]="item.description"
+        ></app-detail-icon-item>
+      </ng-container>
     </app-details-card>
   </div>
 </section>

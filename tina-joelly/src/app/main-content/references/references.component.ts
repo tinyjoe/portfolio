@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { PortfolioDataService } from '../../model/portfolio-data.service';
 
 @Component({
   selector: 'app-references',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+  styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
-
+  references = inject(PortfolioDataService);
 }

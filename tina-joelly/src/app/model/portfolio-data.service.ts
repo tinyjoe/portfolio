@@ -44,5 +44,78 @@ export class PortfolioDataService {
     },
   ];
 
-  projectsList = [];
+  projectsList = [
+    {
+      title: 'Little Reapers',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
+      technologies: [
+        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        {
+          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          title: 'JavaScript',
+        },
+      ],
+      teaserImg: 'teaser',
+      mockupImg: 'MockUp',
+      gitHubUrl: 'GitHub Link',
+      liveUrl: 'LiveUrl',
+    },
+    {
+      title: 'Join',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
+      technologies: [
+        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        {
+          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          title: 'JavaScript',
+        },
+        { iconUrl: '/assets/img/skills_icons/Firebase.png', title: 'Firebase' },
+        { iconUrl: '/assets/img/skills_icons/Git.png', title: 'GIT' },
+      ],
+      teaserImg: 'teaser',
+      mockupImg: 'MockUp',
+      gitHubUrl: 'GitHub Link',
+      liveUrl: 'LiveUrl',
+    },
+    {
+      title: 'Pokedex',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
+      technologies: [
+        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        {
+          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          title: 'JavaScript',
+        },
+        { iconUrl: '/assets/img/skills_icons/Rest-Api.png', title: 'Rest-Api' },
+      ],
+      teaserImg: 'teaser',
+      mockupImg: 'MockUp',
+      gitHubUrl: 'GitHub Link',
+      liveUrl: 'LiveUrl',
+    },
+  ];
+
+  referencesList = [
+    {
+      name: 'Jonas Müller, Team-Partner',
+      quote:
+        'Working with Tina was a real asset – her attention to detail and structured approach pushed our project forward significantly.',
+    },
+    {
+      name: 'Anna Schulz, Frontend Engineer',
+      quote:
+        'Tina is not only technically skilled but also a great team player – always bringing clear communication and creative solutions.',
+    },
+    {
+      name: 'David König, Frontend Developer',
+      quote:
+        'Tina has an impressive ability to translate complex designs precisely while keeping performance and usability in focus.',
+    },
+  ];
 }

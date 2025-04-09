@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-list-item',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './project-list-item.component.html',
-  styleUrl: './project-list-item.component.scss'
+  styleUrl: './project-list-item.component.scss',
 })
 export class ProjectListItemComponent {
-
+  @Input() title: string = '';
+  @Input() teaserImg: string = '';
+  @Input() technologies: string[] = [];
 }

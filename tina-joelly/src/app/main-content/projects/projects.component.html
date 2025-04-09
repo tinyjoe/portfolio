@@ -1,8 +1,13 @@
 <section>
   <p class="column-title">Portfolio</p>
   <h2>Featured Projects</h2>
+  <p>
+    Explore a selection of my work here - Interact with projects to see my
+    skills in action.
+  </p>
   <div class="project-list-container">
-    <app-project-list-item></app-project-list-item>
-    <app-project-list-item></app-project-list-item>
+    @for(project of projects.projectsList; track project.title) {
+    <app-project-list-item title="{{ project.title }}"></app-project-list-item>
+    }
   </div>
 </section>

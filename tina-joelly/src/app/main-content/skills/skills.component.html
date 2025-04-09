@@ -17,11 +17,11 @@
     </app-details-card>
   </div>
   <div class="skill-items-container">
-    @for(skill of skills.skillsList; track skill.title){
-    <app-skills-item
-      [iconUrl]="skill.iconUrl"
-      [title]="skill.title"
-    ></app-skills-item>
-    }
+    <ng-container *ngFor="let skill of skills.skillsList">
+      <app-skills-item
+        [iconUrl]="skill.iconUrl"
+        [title]="skill.title"
+      ></app-skills-item>
+    </ng-container>
   </div>
 </section>
