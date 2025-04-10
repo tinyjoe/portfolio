@@ -2,20 +2,115 @@
 
 section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   gap: 20px;
   top: 0;
-  width: 100vw;
   height: 100vh;
+  padding: 0px 100px;
+  overflow: hidden;
   background-color: $darkgradient;
   background: linear-gradient(
     55.22deg,
     $darkgradient 36.26%,
     $greengradient 93.28%
   );
+}
+
+.title-container {
+  display: flex;
+  height: 100vh;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-container {
+  display: flex;
+  height: 100vh;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.scroll-down-btn {
+  width: 30px;
+  height: 48px;
+  border-radius: 20px;
+  border: solid 1px $primary;
+}
+
+.vertical-line {
+  border-left: solid 1px $primary;
+  height: 240px;
+}
+
+.hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  gap: 10px;
+  cursor: pointer;
+  &:hover {
+    .hero-circle {
+      opacity: 1;
+    }
+  }
+}
+
+.hero-github {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-image: url("/assets/img/icons/github.png");
+  &:hover {
+    background-image: url("/assets/img/icons/github_white.png");
+  }
+}
+
+.hero-linkedin {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-image: url("/assets/img/icons/linkedin.png");
+  &:hover {
+    background-image: url("/assets/img/icons/linkedin_white.png");
+  }
+}
+
+.hero-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: $primary;
+  opacity: 0;
+}
+
+.vertical-line-white {
+  border-left: solid 1px white;
+  height: 186px;
+}
+
+.hero-mail {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+  margin-bottom: 75px;
+  rotate: -90deg;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
 }
 
 div {

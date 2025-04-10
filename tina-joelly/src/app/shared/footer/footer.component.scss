@@ -5,6 +5,7 @@ section {
   align-items: center;
   justify-content: center;
   position: absolute;
+  padding: 0px 100px;
   left: 0;
   right: 0;
   padding: 50px;
@@ -24,11 +25,13 @@ section {
   gap: 5px;
 }
 
-.header-logo {
-  width: 130px;
+.footer-logo {
+  width: 107px;
   height: 48px;
-  background-color: $primary;
+  margin-bottom: 20px;
+  background-image: url("/assets/img/elements/logo.png");
+  background-size: contain;
   &:hover {
-    background-color: $greengradient;
+    background-image: url("/assets/img/elements/logo_hover.png");
   }
 }

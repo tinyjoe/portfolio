@@ -1,0 +1,33 @@
+@import "colors";
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &:hover {
+    .footer-circle {
+      opacity: 1;
+    }
+    a {
+      color: $primary;
+    }
+  }
+}
+
+a {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $primary;
+  opacity: 0;
+}

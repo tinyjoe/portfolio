@@ -1,14 +1,35 @@
 <section>
-  <h3>Frontend Developer</h3>
-  <h1>Tina Jölly</h1>
-  <div>
-    <app-main-button
-      title="Check my work"
-      [onClick]="navigateToWork"
-    ></app-main-button>
-    <app-main-button
-      title="Contact me"
-      [onClick]="navigateToContactForm"
-    ></app-main-button>
+  <div class="side-container">
+    <div class="scroll-down-btn">
+      <img src="/assets/img/icons/arrow_down.png" />
+    </div>
+    <div class="vertical-line"></div>
   </div>
+  <div class="title-container">
+    <h3>Frontend Developer</h3>
+    <h1>Tina Jölly</h1>
+    <div>
+      <app-main-button
+        title="Check my work"
+        [onClick]="navigateToWork"
+      ></app-main-button>
+      <app-main-button
+        title="Contact me"
+        [onClick]="navigateToContactForm"
+      ></app-main-button>
+    </div>
+  </div>
+  <div class="side-container">
+    <p class="hero-mail">tina_joelly&#64;gmx.at</p>
+    <div class="hero-icon">
+      <div class="hero-github"></div>
+      <div class="hero-circle"></div>
+    </div>
+    <div class="hero-icon">
+      <div class="hero-linkedin"></div>
+      <div class="hero-circle"></div>
+    </div>
+    <div class="vertical-line-white"></div>
+  </div>
+  <app-hero-banner></app-hero-banner>
 </section>
