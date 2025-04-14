@@ -3,13 +3,31 @@
 div {
   display: flex;
   width: 90vw;
+  height: 40px;
   align-items: center;
   &:hover {
     .project-list-container {
       background-color: #3dcfb64d;
     }
     .preview-container {
-      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      margin-bottom: -100px;
+      .teaser-img {
+        width: 295px;
+        height: 192px;
+        border-radius: 16px;
+        background-color: $primary;
+      }
+      .teaser-bg {
+        width: 295px;
+        height: 192px;
+        margin-right: -305px;
+        margin-top: 20px;
+        border-radius: 16px;
+      }
     }
     img {
       opacity: 1;
@@ -21,9 +39,9 @@ div {
   display: flex;
   flex-direction: column;
   width: 60%;
-  height: 30px;
   justify-content: space-between;
   border-bottom: 1px solid $primary;
+  border-top: 1px solid $primary;
   padding: 40px 32px;
   cursor: pointer;
 }
@@ -51,24 +69,11 @@ div {
   justify-content: flex-end;
 }
 
+.separator {
+  margin: 0 5px;
+  color: $primary;
+}
+
 .preview-container {
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
-  margin-bottom: -100px;
-  .teaser-img {
-    width: 295px;
-    height: 192px;
-    border-radius: 16px;
-    background-color: $primary;
-  }
-  .teaser-bg {
-    width: 295px;
-    height: 192px;
-    margin-right: -305px;
-    margin-top: 20px;
-    border-radius: 16px;
-  }
+  display: none;
 }

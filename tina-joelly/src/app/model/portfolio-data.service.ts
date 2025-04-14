@@ -103,17 +103,20 @@ export class PortfolioDataService {
 
   referencesList = [
     {
-      name: 'Jonas Müller, Team-Partner',
+      name: 'Jonas Müller',
+      role: 'Team-Partner',
       quote:
         'Working with Tina was a real asset – her attention to detail and structured approach pushed our project forward significantly.',
     },
     {
-      name: 'Anna Schulz, Frontend Engineer',
+      name: 'Anna Schulz',
+      role: 'Frontend Engineer',
       quote:
         'Tina is not only technically skilled but also a great team player – always bringing clear communication and creative solutions.',
     },
     {
-      name: 'David König, Frontend Developer',
+      name: 'David König',
+      role: 'Frontend Developer',
       quote:
         'Tina has an impressive ability to translate complex designs precisely while keeping performance and usability in focus.',
     },

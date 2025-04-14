@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "colors";
 
 section {
   display: flex;
@@ -102,6 +102,7 @@ section {
   font-family: "Karla";
   font-weight: 400;
   font-size: 18px;
+  text-decoration: none;
   line-height: 120%;
   letter-spacing: 0%;
   color: white;
@@ -109,6 +110,9 @@ section {
   rotate: -90deg;
   cursor: pointer;
   &:hover {
+    color: $primary;
+  }
+  &:active {
     color: $primary;
   }
 }

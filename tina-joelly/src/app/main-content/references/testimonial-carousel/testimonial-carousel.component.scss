@@ -1,0 +1,77 @@
+@import "colors";
+
+.carousel-wrapper {
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+
+  .testimonial-card {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+    background-color: rgba(24, 65, 65, 0.6);
+    border: 1px solid #1fe4c2;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    z-index: 0;
+
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
+
+    .quote {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #1fe4c2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2b8d8d;
+      cursor: pointer;
+
+      &.active {
+        background-color: #1fe4c2;
+      }
+    }
+  }
+}

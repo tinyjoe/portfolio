@@ -1,3 +1,5 @@
+@import "colors";
+
 section {
   display: flex;
   flex-direction: column;
@@ -14,4 +16,13 @@ section {
   line-height: 100%;
   letter-spacing: 0%;
   color: $primary;
+}
+
+.carousel-container {
+  color: #e0fef5;
+  width: 100%;
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
 }

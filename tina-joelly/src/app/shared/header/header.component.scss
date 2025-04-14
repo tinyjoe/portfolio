@@ -28,43 +28,6 @@ section {
   gap: 20px;
 }
 
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-  cursor: pointer;
-  h4 {
-    font-family: "Fira Code";
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-    line-height: 100%;
-    letter-spacing: -3%;
-    margin-top: 5px;
-  }
-  .hover-circle {
-    background-color: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    margin-top: 2px;
-  }
-  &:hover {
-    .hover-circle {
-      background-color: $primary;
-    }
-  }
-  &:active {
-    h4 {
-      color: $primary;
-    }
-    .hover-circle {
-      background-color: $primary;
-    }
-  }
-}
-
 .header-logo {
   width: 169px;
   height: 75px;

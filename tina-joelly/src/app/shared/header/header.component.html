@@ -1,19 +1,10 @@
 <section>
   <div class="menu-header">
     <div class="nav-items">
-      <mat-slide-toggle labelPosition="before"></mat-slide-toggle>
-      <div class="menu-item">
-        <h4>About me</h4>
-        <div class="hover-circle"></div>
-      </div>
-      <div class="menu-item">
-        <h4>Skills</h4>
-        <div class="hover-circle"></div>
-      </div>
-      <div class="menu-item">
-        <h4>Projects</h4>
-        <div class="hover-circle"></div>
-      </div>
+      <app-language-switch></app-language-switch>
+      <app-header-link title="About me" url="about-me"></app-header-link>
+      <app-header-link title="Skills" url="skills"></app-header-link>
+      <app-header-link title="Projects" url="projects"></app-header-link>
     </div>
     <div class="header-logo"></div>
   </div>

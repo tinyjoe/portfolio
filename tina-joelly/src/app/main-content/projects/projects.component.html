@@ -1,13 +1,15 @@
-<section>
+<section id="projects">
   <p class="column-title">Portfolio</p>
   <h2>Featured Projects</h2>
   <p>
     Explore a selection of my work here - Interact with projects to see my
     skills in action.
   </p>
-  <div class="project-list-container">
-    @for(project of projects.projectsList; track project.title) {
-    <app-project-list-item title="{{ project.title }}"></app-project-list-item>
-    }
+  <div class="divider-line"></div>
+  <div
+    class="project-list-container"
+    *ngFor="let project of projects.projectsList"
+  >
+    <app-project-list-item [project]="project"></app-project-list-item>
   </div>
 </section>

@@ -8,7 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project-list-item.component.scss',
 })
 export class ProjectListItemComponent {
-  @Input() title: string = '';
-  @Input() teaserImg: string = '';
-  @Input() technologies: string[] = [];
+  @Input() project: any;
 }
