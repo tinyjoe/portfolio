@@ -23,4 +23,12 @@ export class TestimonialCarouselComponent {
     this.currentIndex =
       (this.currentIndex - 1 + this.refQuotes.length) % this.refQuotes.length;
   }
+
+  getCardPositionClass(index: number): string {
+    const total = this.refQuotes.length;
+    if (index === this.currentIndex) return 'card active';
+    if (index === (this.currentIndex - 1 + total) % total) return 'card left';
+    if (index === (this.currentIndex + 1) % total) return 'card right';
+    return 'card hidden';
+  }
 }

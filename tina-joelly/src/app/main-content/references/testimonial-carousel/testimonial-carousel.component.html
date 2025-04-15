@@ -1,24 +1,31 @@
 <div class="carousel-wrapper">
-  <div
-    class="testimonial-card"
-    *ngFor="let t of refQuotes; let i = index"
-    [class.active]="i === currentIndex"
-  >
-    <p class="quote">“{{ t.quote }}”</p>
-    <hr />
-    <p class="author">{{ t.name }} - {{ t.role }}</p>
-  </div>
-</div>
-
-<div class="controls">
-  <button class="arrow" (click)="prev()">&#8592;</button>
-  <div class="dots">
-    <span
+  <div class="carousel overlay-gradient">
+    <div
+      class="testimonial-card"
       *ngFor="let t of refQuotes; let i = index"
-      class="dot"
-      [class.active]="i === currentIndex"
-      (click)="goTo(i)"
-    ></span>
+      [ngClass]="getCardPositionClass(i)"
+    >
+      <div class="quote-symbol"><img src="/assets/img/icons/quotes.png" /></div>
+      <p class="quote">{{ t.quote }}</p>
+      <div class="name-row">
+        <div class="divider"></div>
+        <div class="name-container">
+          <p>{{ t.name }} - {{ t.role }}</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <button class="arrow" (click)="next()">&#8594;</button>
+
+  <div class="controls">
+    <button class="arrow-left" (click)="prev()"></button>
+    <div class="dots">
+      <span
+        *ngFor="let t of refQuotes; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex"
+        (click)="goTo(i)"
+      ></span>
+    </div>
+    <button class="arrow-right" (click)="next()"></button>
+  </div>
 </div>
