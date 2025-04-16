@@ -1,0 +1,39 @@
+<div>
+  <form action="sendMail.php">
+    <app-contact-input
+      labelFor="fname"
+      label="What's your name?"
+      inputId="fname"
+      inputName="fullname"
+      placeholder="Your name goes here"
+    ></app-contact-input>
+    <app-contact-input
+      labelFor="mail"
+      label="What's your email?"
+      inputId="mail"
+      inputName="email"
+      placeholder="youremail@email.com"
+      regExPattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+    ></app-contact-input>
+    <app-contact-input
+      labelFor="message"
+      label="How can I help you?"
+      inputId="message"
+      inputName="message"
+      placeholder="Hello Tina, I am interested in..."
+    ></app-contact-input>
+    <div class="privacy-check-item">
+      <label class="privacy-checkbox">
+        <input type="checkbox" name="privacy-policy" />
+        <span class="checkmark"></span>
+      </label>
+      <p class="small-print">
+        I've read the <a href="privacy-policy">privacy policy</a> and agree to
+        the processing of my data as outlined
+      </p>
+    </div>
+    <div class="submit-button-container">
+      <app-main-button title="Say hello ;)"></app-main-button>
+    </div>
+  </form>
+</div>

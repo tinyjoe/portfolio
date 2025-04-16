@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-switch',
+  standalone: true,
   imports: [],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',

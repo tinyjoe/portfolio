@@ -1,0 +1,39 @@
+@import "colors";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 25px 20px 25px;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+label {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: $primary;
+}
+
+input[type="text"] {
+  padding: 10px 0px;
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+  border: none;
+  background-color: $darkgradient;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

@@ -13,19 +13,21 @@ div {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40%;
+      width: 50%;
       margin-bottom: -100px;
       .teaser-img {
-        width: 295px;
-        height: 192px;
+        width: 450px;
+        height: 250px;
         border-radius: 16px;
         background-color: $primary;
       }
       .teaser-bg {
-        width: 295px;
-        height: 192px;
-        margin-right: -305px;
-        margin-top: 20px;
+        width: 450px;
+        height: 250px;
+        background-image: url("/assets/img/teaser-img-hover.png");
+        background-size: cover;
+        margin-right: -475px;
+        margin-top: 40px;
         border-radius: 16px;
       }
     }
@@ -38,7 +40,7 @@ div {
 .project-list-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   justify-content: space-between;
   border-bottom: 1px solid $primary;
   border-top: 1px solid $primary;
