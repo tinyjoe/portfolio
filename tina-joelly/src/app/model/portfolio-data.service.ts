@@ -50,31 +50,37 @@ export class PortfolioDataService {
       description:
         'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
       technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
         {
-          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
           title: 'JavaScript',
         },
       ],
       teaserImg: 'teaser',
       mockupImg: 'MockUp',
-      gitHubUrl: 'GitHub Link',
+      gitHubUrl: 'https://github.com/tinyjoe/little_reapers',
       liveUrl: 'LiveUrl',
     },
     {
       title: 'Join',
       description:
-        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
         {
-          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
           title: 'JavaScript',
         },
-        { iconUrl: '/assets/img/skills_icons/Firebase.png', title: 'Firebase' },
-        { iconUrl: '/assets/img/skills_icons/Git.png', title: 'GIT' },
+        {
+          iconUrl: '/assets/img/skills_icons/Firebase-small.png',
+          title: 'Firebase',
+        },
+        {
+          iconUrl: '/assets/img/skills_icons/Firebase-small.png',
+          title: 'GIT',
+        },
       ],
       teaserImg: 'teaser',
       mockupImg: 'MockUp',
@@ -84,19 +90,22 @@ export class PortfolioDataService {
     {
       title: 'Pokedex',
       description:
-        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
+        'An illustrated Pokémon Encyclopedia, where you can find all sorts of Pokémon. You can also search for specific ones or view some detailed information from an API.',
       technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
+        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
+        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
         {
-          iconUrl: '/assets/img/skills_icons/JavaScript.png',
+          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
           title: 'JavaScript',
         },
-        { iconUrl: '/assets/img/skills_icons/Rest-Api.png', title: 'Rest-Api' },
+        {
+          iconUrl: '/assets/img/skills_icons/Firebase-small.png',
+          title: 'Rest-Api',
+        },
       ],
       teaserImg: 'teaser',
       mockupImg: 'MockUp',
-      gitHubUrl: 'GitHub Link',
+      gitHubUrl: 'https://github.com/tinyjoe/pokedex',
       liveUrl: 'LiveUrl',
     },
   ];
