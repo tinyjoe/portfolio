@@ -1,47 +1,51 @@
 <section>
-  <div class="side-container">
-    <div class="scroll-down-btn">
-      <img src="/assets/img/icons/arrow_down.png" />
-    </div>
-    <div class="vertical-line"></div>
-  </div>
-  <div class="title-container">
-    <h3>Frontend Developer</h3>
-    <h1>Tina Jölly</h1>
-    <div>
-      <app-main-button
-        title="Check my work"
-        [onClick]="navigateToWork"
-      ></app-main-button>
-      <app-main-button
-        title="Contact me"
-        [onClick]="navigateToContactForm"
-      ></app-main-button>
-    </div>
-  </div>
-  <div class="side-container">
-    <a class="hero-mail" href="mailto:tina_joelly@gmx.at">
-      tina_joelly&#64;gmx.at
-    </a>
-    <a
-      href="https://github.com/tinyjoe"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><div class="hero-icon">
-        <div class="hero-github"></div>
-        <div class="hero-circle"></div>
+  <div class="hero-content">
+    <div class="side-container">
+      <div class="scroll-down-btn">
+        <img src="/assets/img/icons/arrow_down.png" />
       </div>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/tina-joelly/"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><div class="hero-icon">
-        <div class="hero-linkedin"></div>
-        <div class="hero-circle"></div>
+      <div class="vertical-line"></div>
+    </div>
+    <div class="title-container">
+      <h3>Frontend Developer</h3>
+      <h1>Tina Jölly</h1>
+      <div>
+        <app-main-button
+          title="Check my work"
+          [onClick]="navigateToWork"
+          [buttonWidth]="'175px'"
+        ></app-main-button>
+        <app-main-button
+          title="Contact me"
+          [onClick]="navigateToContactForm"
+          [buttonWidth]="'148px'"
+        ></app-main-button>
       </div>
-    </a>
-    <div class="vertical-line-white"></div>
+    </div>
+    <div class="side-container">
+      <a class="hero-mail" href="mailto:tina_joelly@gmx.at">
+        tina_joelly&#64;gmx.at
+      </a>
+      <a
+        href="https://github.com/tinyjoe"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><div class="hero-icon">
+          <div class="hero-github"></div>
+          <div class="hero-circle"></div>
+        </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/tina-joelly/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><div class="hero-icon">
+          <div class="hero-linkedin"></div>
+          <div class="hero-circle"></div>
+        </div>
+      </a>
+      <div class="vertical-line-white"></div>
+    </div>
   </div>
   <app-hero-banner></app-hero-banner>
 </section>

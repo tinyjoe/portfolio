@@ -24,6 +24,21 @@ export class PortfolioDataService {
     },
   ];
 
+  bannerSections = [
+    'Frontend Developer',
+    'Based in Carinthia',
+    'Open to work',
+    'Available for remote work',
+    'Frontend Developer',
+    'Based in Carinthia',
+    'Open to work',
+    'Available for remote work',
+    'Frontend Developer',
+    'Based in Carinthia',
+    'Open to work',
+    'Available for remote work',
+  ];
+
   skillsList = [
     { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
     { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },

@@ -1,10 +1,8 @@
 <div class="banner-container">
-  <div class="divider-circle"></div>
-  <p>Frontend Developer</p>
-  <div class="divider-circle"></div>
-  <p>Based in Carinthia</p>
-  <div class="divider-circle"></div>
-  <p>Open to work</p>
-  <div class="divider-circle"></div>
-  <p>Available for remote work</p>
+  <div class="wrapper">
+    <ng-container *ngFor="let title of bannerTitles.bannerSections">
+      <div class="divider-circle"></div>
+      <p>{{ title }}</p>
+    </ng-container>
+  </div>
 </div>

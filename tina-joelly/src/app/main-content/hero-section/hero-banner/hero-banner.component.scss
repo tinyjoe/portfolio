@@ -1,20 +1,30 @@
 @import "colors";
 
 .banner-container {
-  width: 100%;
   rotate: -3deg;
+  width: 100%;
   position: absolute;
-  left: -10px;
+  overflow: hidden;
+  left: -30px;
   right: 0px;
   bottom: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: flex-start;
   background-color: #3dcfb720;
   backdrop-filter: blur(5.300000190734863px);
   padding: 20px;
   z-index: 300;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: loopingText 20s linear infinite;
+  gap: 50px;
   p {
     font-family: "Karla";
     font-weight: 400;
@@ -22,6 +32,7 @@
     line-height: 120%;
     letter-spacing: 0%;
     color: $primary;
+    max-lines: 1;
   }
 }
 
@@ -30,4 +41,13 @@
   height: 8px;
   border-radius: 8px;
   background-color: $primary;
+}
+
+@keyframes loopingText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
