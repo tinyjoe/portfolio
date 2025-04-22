@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { DetailsCardComponent } from '../../shared/details-card/details-card.component';
-import { DetailIconItemComponent } from '../../shared/detail-icon-item/detail-icon-item.component';
+import { DetailIconItemComponent } from './detail-icon-item/detail-icon-item.component';
 import { PortfolioDataService } from '../../model/portfolio-data.service';
 import { CommonModule } from '@angular/common';
 

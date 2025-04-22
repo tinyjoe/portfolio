@@ -1,19 +1,21 @@
 <section id="projects">
-  <p class="column-title">Portfolio</p>
-  <h2>Featured Projects</h2>
-  <p>
-    Explore a selection of my work here - Interact with projects to see my
-    skills in action.
-  </p>
-  <div class="divider-line"></div>
-  <div
-    class="project-list-container"
-    *ngFor="let project of projects.projectsList; let i = index"
-  >
-    <app-project-list-item
-      [project]="project"
-      [index]="i"
-      [projectsList]="projects.projectsList"
-    ></app-project-list-item>
+  <div class="projects-content">
+    <p class="column-title">Portfolio</p>
+    <h2>Featured Projects</h2>
+    <p>
+      Explore a selection of my work here - Interact with projects to see my
+      skills in action.
+    </p>
+    <div class="divider-line"></div>
+    <div
+      class="project-list-container"
+      *ngFor="let project of projects.projectsList; let i = index"
+    >
+      <app-project-list-item
+        [project]="project"
+        [index]="i"
+        [projectsList]="projects.projectsList"
+      ></app-project-list-item>
+    </div>
   </div>
 </section>

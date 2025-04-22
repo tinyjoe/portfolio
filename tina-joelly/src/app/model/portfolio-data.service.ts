@@ -40,22 +40,45 @@ export class PortfolioDataService {
   ];
 
   skillsList = [
-    { iconUrl: '/assets/img/skills_icons/HTML.png', title: 'HTML' },
-    { iconUrl: '/assets/img/skills_icons/CSS.png', title: 'CSS' },
-    { iconUrl: '/assets/img/skills_icons/JavaScript.png', title: 'JavaScript' },
+    {
+      iconUrl: '/assets/img/skills_icons/HTML.png',
+      title: 'HTML',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/CSS.png',
+      title: 'CSS',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/JavaScript.png',
+      title: 'JavaScript',
+    },
     {
       iconUrl: '/assets/img/skills_icons/MaterialDesign.png',
       title: 'Material Design',
     },
-    { iconUrl: '/assets/img/skills_icons/TypeScript.png', title: 'TypeScript' },
-    { iconUrl: '/assets/img/skills_icons/Angular.png', title: 'Angular' },
-    { iconUrl: '/assets/img/skills_icons/Firebase.png', title: 'Firebase' },
-    { iconUrl: '/assets/img/skills_icons/Git.png', title: 'GIT' },
-    { iconUrl: '/assets/img/skills_icons/Rest-Api.png', title: 'Rest-Api' },
-    { iconUrl: '/assets/img/skills_icons/Scrum.png', title: 'Scrum' },
     {
-      iconUrl: '/assets/img/skills_icons/GrowthMindset.png',
-      title: 'Growth mindset',
+      iconUrl: '/assets/img/skills_icons/TypeScript.png',
+      title: 'TypeScript',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/Angular.png',
+      title: 'Angular',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/Firebase.png',
+      title: 'Firebase',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/Git.png',
+      title: 'GIT',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/Rest-Api.png',
+      title: 'Rest-Api',
+    },
+    {
+      iconUrl: '/assets/img/skills_icons/Scrum.png',
+      title: 'Scrum',
     },
   ];
 

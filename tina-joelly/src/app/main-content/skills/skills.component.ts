@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { DetailsCardComponent } from '../../shared/details-card/details-card.component';
-import { SkillsItemComponent } from '../../shared/skills-item/skills-item.component';
+import { SkillsItemComponent } from './skills-item/skills-item.component';
 import { PortfolioDataService } from '../../model/portfolio-data.service';
 import { MainButtonComponent } from '../../shared/main-button/main-button.component';
 import { CommonModule } from '@angular/common';
+import { GrowthMindsetItemComponent } from './growth-mindset-item/growth-mindset-item.component';
 
 @Component({
   selector: 'app-skills',
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
     DetailsCardComponent,
     SkillsItemComponent,
     MainButtonComponent,
+    GrowthMindsetItemComponent,
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
