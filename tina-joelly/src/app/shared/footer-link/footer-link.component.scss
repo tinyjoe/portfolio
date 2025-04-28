@@ -31,3 +31,15 @@ a {
   background-color: $primary;
   opacity: 0;
 }
+
+@media (max-width: 400px) {
+  a {
+    font-size: 14px;
+  }
+
+  .footer-circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+  }
+}

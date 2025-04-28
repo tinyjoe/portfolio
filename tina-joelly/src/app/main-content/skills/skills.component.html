@@ -3,7 +3,6 @@
     <div class="skill-card-container">
       <p class="column-title">Technologies</p>
       <app-details-card
-        [width]="'450px'"
         title="Skillset"
         description="A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development."
       >
@@ -14,12 +13,11 @@
             knowledge.
           </p>
         </div>
-        <a href="#contact">
-          <app-main-button
-            title="Let's talk"
-            [buttonWidth]="'125px'"
-          ></app-main-button>
-        </a>
+        <app-main-button
+          title="Let's talk"
+          [buttonWidth]="'125px'"
+          [onClick]="navigateToContactForm"
+        ></app-main-button>
       </app-details-card>
     </div>
     <div class="skill-items-container">

@@ -10,10 +10,10 @@ import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 })
 export class HeroSectionComponent {
   navigateToWork() {
-    console.log('Work button clicked');
+    document.location.href = '#projects';
   }
 
   navigateToContactForm() {
-    console.log('Contact button clicked');
+    document.location.href = '#contact';
   }
 }

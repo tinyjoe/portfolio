@@ -20,4 +20,8 @@ import { GrowthMindsetItemComponent } from './growth-mindset-item/growth-mindset
 })
 export class SkillsComponent {
   skills = inject(PortfolioDataService);
+
+  navigateToContactForm() {
+    document.location.href = '#contact';
+  }
 }

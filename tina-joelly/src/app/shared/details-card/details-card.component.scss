@@ -17,3 +17,15 @@ div {
   padding: 45px 32px;
   border-radius: 30px;
 }
+
+@media (max-width: 795px) {
+  .card-content {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-content {
+    padding: 20px 18px;
+  }
+}

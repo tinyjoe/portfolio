@@ -11,4 +11,5 @@ export class MainButtonComponent {
   @Input() title: string = 'Placeholder';
   @Input() onClick: () => void = () => {};
   @Input() buttonWidth = '120px';
+  @Input() href: string = '';
 }
