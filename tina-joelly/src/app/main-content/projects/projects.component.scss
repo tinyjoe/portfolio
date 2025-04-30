@@ -24,3 +24,39 @@ section {
   gap: 0px;
   margin-top: 55px;
 }
+
+@media (max-width: 1440px) {
+  section {
+    padding: 100px 80px 250px 80px;
+  }
+}
+
+@media (max-width: 1280px) {
+  section {
+    padding: 80px 60px 250px 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 80px 40px 200px 40px;
+  }
+}
+
+@media (max-width: 795px) {
+  section {
+    padding: 80px 30px 200px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 60px 15px 150px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 15px 100px 15px;
+  }
+}

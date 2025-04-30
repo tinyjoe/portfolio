@@ -66,3 +66,20 @@
     }
   }
 }
+
+@media (max-width: 795px) {
+  .mindset-item-container {
+    .mindset-icon {
+      margin-bottom: 15px;
+    }
+
+    .subline {
+      font-size: 16px;
+    }
+    &:hover {
+      .mindset-hover {
+        display: none !important;
+      }
+    }
+  }
+}

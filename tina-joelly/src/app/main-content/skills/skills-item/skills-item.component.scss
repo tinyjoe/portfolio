@@ -27,3 +27,16 @@
   letter-spacing: 0%;
   text-align: center;
 }
+
+@media (max-width: 795px) {
+  .skills-icon {
+    margin-bottom: 15px;
+    &:hover {
+      margin-bottom: 10px;
+    }
+  }
+
+  .subline {
+    font-size: 16px;
+  }
+}
