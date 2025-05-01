@@ -32,9 +32,74 @@ section {
   width: 169px;
   height: 75px;
   background-image: url("/assets/img/elements/logo.png");
-  background-size: contain;
+  background-size: cover;
   &:hover {
     width: 167px;
     background-image: url("/assets/img/elements/logo_hover.png");
+  }
+}
+
+.mobile-header-logo {
+  display: none;
+}
+
+.mobile-burger-menu {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .menu-header {
+    padding: 0px 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu-header {
+    padding: 0px 60px;
+  }
+}
+
+@media (max-width: 880px) {
+  .menu-header {
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 795px) {
+  .header-logo {
+    display: none;
+  }
+
+  .mobile-header-logo {
+    display: block;
+    width: 55px;
+    height: 62px;
+    background-image: url("/assets/img/elements/keyvisual.png");
+    background-size: cover;
+    &:hover {
+      width: 57px;
+      height: 64px;
+      background-image: url("/assets/img/elements/keyvisual_hover.png");
+    }
+  }
+
+  .mobile-burger-menu {
+    display: block !important;
+  }
+
+  .nav-items {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-header {
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-header {
+    padding: 0px 15px;
   }
 }

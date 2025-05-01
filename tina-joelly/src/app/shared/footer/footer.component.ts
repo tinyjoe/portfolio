@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FooterLinkComponent } from '../footer-link/footer-link.component';
+import { FooterLinkComponent } from './footer-link/footer-link.component';
 
 @Component({
   selector: 'app-footer',

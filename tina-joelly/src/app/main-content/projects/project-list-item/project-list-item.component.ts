@@ -20,9 +20,9 @@ export class ProjectListItemComponent {
   openProjectDialog(): void {
     this.dialog.open(ProjectDialogComponent, {
       data: { projects: this.projectsList, currentIndex: this.index },
-      width: '70vw',
-      maxWidth: '1248px',
-      height: '80vh',
+      width: '90vw',
+      maxWidth: '1280px',
+      height: '90vh',
       maxHeight: '90vh',
       panelClass: 'project-dialog-container',
     });

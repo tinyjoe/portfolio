@@ -7,15 +7,16 @@
       skills in action.
     </p>
     <div class="divider-line"></div>
-    <div
-      class="project-list-container"
-      *ngFor="let project of projects.projectsList; let i = index"
-    >
-      <app-project-list-item
-        [project]="project"
-        [index]="i"
-        [projectsList]="projects.projectsList"
-      ></app-project-list-item>
+    <div class="project-list-container">
+      <ng-container
+        *ngFor="let project of projects.projectsList; let i = index"
+      >
+        <app-project-list-item
+          [project]="project"
+          [index]="i"
+          [projectsList]="projects.projectsList"
+        ></app-project-list-item>
+      </ng-container>
     </div>
   </div>
 </section>

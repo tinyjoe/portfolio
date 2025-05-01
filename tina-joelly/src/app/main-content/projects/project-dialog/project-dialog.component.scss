@@ -13,26 +13,53 @@
 
 .dialog-container {
   display: flex;
+  flex-direction: column;
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  padding: 100px 75px;
+  gap: 30px;
+  padding: 50px 75px;
   background: linear-gradient(
     55.22deg,
     $darkgradient 36.26%,
     $greengradient 93.28%
   );
+  overflow: scroll;
+}
+
+.close-button-row {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: -100px;
+  z-index: 30;
+}
+
+.project-header-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .project-details-container {
   display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
   gap: 30px;
+  .project-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 50px;
+  }
+  img {
+    width: 450px;
+    height: 300px;
+    border-radius: 24px;
+  }
 }
 
 .inner-section {
@@ -59,6 +86,11 @@
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 0px;
+  }
 }
 
 .tech-item {
@@ -73,21 +105,12 @@
   gap: 30px;
 }
 
-.project-view-container {
+.project-button-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  width: 40%;
-  height: 100%;
+  width: 100%;
   gap: 50px;
-
-  img {
-    width: 450px;
-    height: 300px;
-    border-radius: 24px;
-    background-color: $primary;
-  }
 }
 
 .close-button {
@@ -132,5 +155,180 @@
     .next-arrow-container {
       justify-content: flex-end;
     }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  margin-right: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbfbfb00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 10px;
+  width: 4px;
+}
+
+@media (max-width: 1280px) {
+  .dialog-container {
+    padding: 30px 50px;
+  }
+
+  .tech-row {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .number {
+    font-size: 115px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .dialog-container {
+    padding: 30px;
+  }
+
+  .project-details-container {
+    img {
+      width: 400px;
+      height: 250px;
+      border-radius: 24px;
+    }
+  }
+
+  .tech-row {
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 0px;
+    }
+  }
+
+  .number {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-details-container {
+    img {
+      width: 350px;
+      height: 230px;
+      border-radius: 24px;
+    }
+  }
+
+  .tech-row {
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 0px;
+    }
+  }
+
+  .number {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 880px) {
+  .project-details-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    .project-info-container {
+      align-items: center;
+      width: 80%;
+      text-align: center;
+      p {
+        text-align: center !important;
+      }
+    }
+    img {
+      width: 60%;
+      height: auto;
+      border-radius: 24px;
+    }
+  }
+
+  .number {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 660px) {
+  .inner-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .project-details-container {
+    .project-info-container {
+      width: 90%;
+    }
+    img {
+      width: 80%;
+    }
+  }
+
+  .project-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .preview-button-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .number {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-details-container {
+    .project-info-container {
+      width: 100%;
+    }
+    img {
+      width: 90%;
+    }
+  }
+
+  .project-header-container {
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .number {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .preview-button-row {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
   }
 }
