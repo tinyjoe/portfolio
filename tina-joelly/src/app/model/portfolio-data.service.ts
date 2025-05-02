@@ -6,12 +6,37 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PortfolioDataService {
   bannerSections: any[] = [];
+  myDetailsList: any[] = [];
+  projectsList: any[] = [];
+  referencesList: any[] = [];
 
   constructor(private translate: TranslateService) {
+    this.translateBannerSections();
+    this.translateDetailsList();
+    this.translateProjectsList();
+    this.translateReferences();
+  }
+
+  translateBannerSections() {
     setTimeout(() => this.initializeBannerSections());
     this.translate.onLangChange.subscribe(() =>
       this.initializeBannerSections()
     );
+  }
+
+  translateDetailsList() {
+    setTimeout(() => this.initializeDetailsList());
+    this.translate.onLangChange.subscribe(() => this.initializeDetailsList());
+  }
+
+  translateProjectsList() {
+    setTimeout(() => this.initializeProjectsList());
+    this.translate.onLangChange.subscribe(() => this.initializeProjectsList());
+  }
+
+  translateReferences() {
+    setTimeout(() => this.initializeReferences());
+    this.translate.onLangChange.subscribe(() => this.initializeReferences());
   }
 
   initializeBannerSections() {
@@ -32,23 +57,141 @@ export class PortfolioDataService {
       });
   }
 
-  myDetailsList = [
-    {
-      iconUrl: '/assets/img/icons/location.png',
-      description:
-        'Where are you based? Would you be open to working remotely or potentially relocating?',
-    },
-    {
-      iconUrl: '/assets/img/icons/cognition.png',
-      description:
-        'Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?',
-    },
-    {
-      iconUrl: '/assets/img/icons/quality.png',
-      description:
-        'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration.',
-    },
-  ];
+  initializeDetailsList() {
+    this.translate
+      .get(['about-me.location', 'about-me.cognition', 'about-me.quality'])
+      .subscribe((translations) => {
+        this.myDetailsList = [
+          {
+            iconUrl: '/assets/img/icons/location.png',
+            description: translations['about-me.location'],
+          },
+          {
+            iconUrl: '/assets/img/icons/cognition.png',
+            description: translations['about-me.cognition'],
+          },
+          {
+            iconUrl: '/assets/img/icons/quality.png',
+            description: translations['about-me.quality'],
+          },
+        ];
+      });
+  }
+
+  initializeProjectsList() {
+    this.translate
+      .get(['projects.little-reapers', 'projects.join', 'projects.pokedex'])
+      .subscribe((translations) => {
+        this.projectsList = [
+          {
+            title: 'Little Reapers',
+            description: translations['projects.little-reapers'],
+            technologies: [
+              {
+                iconUrl: '/assets/img/skills_icons/HTML-small.png',
+                title: 'HTML',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/CSS-small.png',
+                title: 'CSS',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
+                title: 'JavaScript',
+              },
+            ],
+            teaserImg: '/assets/img/mockups/little_reapers_intro.png',
+            mockupImg: '/assets/img/mockups/little_reapers_detail.png',
+            gitHubUrl: 'https://github.com/tinyjoe/little_reapers',
+            liveUrl: 'LiveUrl',
+          },
+          {
+            title: 'Join',
+            description: translations['projects.join'],
+            technologies: [
+              {
+                iconUrl: '/assets/img/skills_icons/HTML-small.png',
+                title: 'HTML',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/CSS-small.png',
+                title: 'CSS',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
+                title: 'JavaScript',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/Firebase-small.png',
+                title: 'Firebase',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/Git-small.png',
+                title: 'GIT',
+              },
+            ],
+            teaserImg: '/assets/img/mockups/join_intro.png',
+            mockupImg: '/assets/img/mockups/join_detail.png',
+            gitHubUrl: 'https://github.com/tinyjoe/join',
+            liveUrl: 'LiveUrl',
+          },
+          {
+            title: 'Pokedex',
+            description: translations['projects.pokedex'],
+            technologies: [
+              {
+                iconUrl: '/assets/img/skills_icons/HTML-small.png',
+                title: 'HTML',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/CSS-small.png',
+                title: 'CSS',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
+                title: 'JavaScript',
+              },
+              {
+                iconUrl: '/assets/img/skills_icons/Rest-Api-small.png',
+                title: 'Rest-Api',
+              },
+            ],
+            teaserImg: '/assets/img/mockups/pokedex.png',
+            mockupImg: '/assets/img/mockups/pokedex.png',
+            gitHubUrl: 'https://github.com/tinyjoe/pokedex',
+            liveUrl: 'LiveUrl',
+          },
+        ];
+      });
+  }
+
+  initializeReferences() {
+    this.translate
+      .get([
+        'references.jm-quote',
+        'references.as-quote',
+        'references.dk-quote',
+      ])
+      .subscribe((translations) => {
+        this.referencesList = [
+          {
+            name: 'Jonas Müller',
+            role: 'Team-Partner',
+            quote: translations['references.jm-quote'],
+          },
+          {
+            name: 'Anna Schulz',
+            role: 'Frontend Engineer',
+            quote: translations['references.as-quote'],
+          },
+          {
+            name: 'David König',
+            role: 'Frontend Developer',
+            quote: translations['references.dk-quote'],
+          },
+        ];
+      });
+  }
 
   skillsList = [
     {
@@ -90,93 +233,6 @@ export class PortfolioDataService {
     {
       iconUrl: '/assets/img/skills_icons/Scrum.png',
       title: 'Scrum',
-    },
-  ];
-
-  projectsList = [
-    {
-      title: 'Little Reapers',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.',
-      technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
-        {
-          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
-          title: 'JavaScript',
-        },
-      ],
-      teaserImg: '/assets/img/mockups/little_reapers_intro.png',
-      mockupImg: '/assets/img/mockups/little_reapers_detail.png',
-      gitHubUrl: 'https://github.com/tinyjoe/little_reapers',
-      liveUrl: 'LiveUrl',
-    },
-    {
-      title: 'Join',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
-        {
-          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
-          title: 'JavaScript',
-        },
-        {
-          iconUrl: '/assets/img/skills_icons/Firebase-small.png',
-          title: 'Firebase',
-        },
-        {
-          iconUrl: '/assets/img/skills_icons/Git-small.png',
-          title: 'GIT',
-        },
-      ],
-      teaserImg: '/assets/img/mockups/join_intro.png',
-      mockupImg: '/assets/img/mockups/join_detail.png',
-      gitHubUrl: 'https://github.com/tinyjoe/join',
-      liveUrl: 'LiveUrl',
-    },
-    {
-      title: 'Pokedex',
-      description:
-        'An illustrated Pokémon Encyclopedia, where you can find all sorts of Pokémon. You can also search for specific ones or view some detailed information from an API.',
-      technologies: [
-        { iconUrl: '/assets/img/skills_icons/HTML-small.png', title: 'HTML' },
-        { iconUrl: '/assets/img/skills_icons/CSS-small.png', title: 'CSS' },
-        {
-          iconUrl: '/assets/img/skills_icons/JavaScript-small.png',
-          title: 'JavaScript',
-        },
-        {
-          iconUrl: '/assets/img/skills_icons/Rest-Api-small.png',
-          title: 'Rest-Api',
-        },
-      ],
-      teaserImg: '/assets/img/mockups/pokedex.png',
-      mockupImg: '/assets/img/mockups/pokedex.png',
-      gitHubUrl: 'https://github.com/tinyjoe/pokedex',
-      liveUrl: 'LiveUrl',
-    },
-  ];
-
-  referencesList = [
-    {
-      name: 'Jonas Müller',
-      role: 'Team-Partner',
-      quote:
-        'Working with Tina was a real asset – her attention to detail and structured approach pushed our project forward significantly.',
-    },
-    {
-      name: 'Anna Schulz',
-      role: 'Frontend Engineer',
-      quote:
-        'Tina is not only technically skilled but also a great team player – always bringing clear communication and creative solutions.',
-    },
-    {
-      name: 'David König',
-      role: 'Frontend Developer',
-      quote:
-        'Tina has an impressive ability to translate complex designs precisely while keeping performance and usability in focus.',
     },
   ];
 }

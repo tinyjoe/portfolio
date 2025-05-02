@@ -1,13 +1,46 @@
 {
+  "general": {
+    "austria": "Austria",
+    "phone": "Phone",
+    "mail": "Email"
+  },
   "sections": {
     "about-me": "About me",
     "skills": "Skills",
-    "projects": "Projects"
+    "projects": "Projects",
+    "quotes": "What my colleagues say about me",
+    "contact": "Let's work together"
   },
   "hero-banner": {
     "frontend-developer": "Frontend Developer",
     "based": "Based in Carinthia",
     "open-to-work": "Open to work",
     "remote-available": "Available for remote work"
+  },
+  "about-me": {
+    "location": "I'm based in Carinthia, Austria, and I'm already well accustomed to remote work. I'm open to remote opportunities and would also consider relocating for the right project.",
+    "cognition": "As a web frontend developer, I'm always open to learning new things and continuously refining my skills. While my main focus is on web technologies, I've also gained experience in app development with Flutter and Kotlin, which has further broadened my perspective and technical versatility.",
+    "quality": "I'm detail-oriented, precise, and reliable. I take my responsibilities seriously and always strive to give my best. When approaching a challenge, I rely on analytical thinking, creativity, persistence, and collaboration to find the most efficient and elegant solution — and I make it a point to learn from every experience."
+  },
+  "projects": {
+    "little-reapers": "Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.",
+    "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "pokedex": "An illustrated Pokémon Encyclopedia, where you can find all sorts of Pokémon. You can also search for specific ones or view some detailed information from an API."
+  },
+  "references": {
+    "jm-quote": "Working with Tina was a real asset - her attention to detail and structured approach pushed our project forward significantly.",
+    "as-quote": "Tina is not only technically skilled but also a great team player - always bringing clear communication and creative solutions.",
+    "dk-quote": "Tina has an impressive ability to translate complex designs precisely while keeping performance and usability in focus."
+  },
+  "imprint": {
+    "heading": "Legal Notice",
+    "info-about": "Information about the service provider:",
+    "eu-dispute-heading": "EU Dispute Resolution",
+    "eu-dispute-copy-1": "In accordance with the Regulation on Online Dispute Resolution in Consumer Matters (ODR Regulation), we would like to inform you about the Online Dispute Resolution platform (ODR platform).Consumers have the option to submit complaints to the Online Dispute Resolution platform of the European Commission at",
+    "eu-dispute-copy-2": "The necessary contact details can be found above in our imprint. However, we would like to point out that we are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "image-credits-heading": "Image Credits",
+    "image-credits-copy": "The images, photos, and graphics on this website are protected by copyright.<br/>Image rights belong to:",
+    "copyright": "All texts are protected by copyright.",
+    "source": "Source: Created with the Impressum Generator from AdSimple"
   }
 }

@@ -1,13 +1,46 @@
 {
+  "general": {
+    "austria": "Österreich",
+    "phone": "Tel.",
+    "mail": "E-Mail"
+  },
   "sections": {
     "about-me": "Über mich",
     "skills": "Fähigkeiten",
-    "projects": "Projekte"
+    "projects": "Projekte",
+    "quotes": "Was meine Kollegen über mich sagen",
+    "contact": "Lass uns zusammenarbeiten"
   },
   "hero-banner": {
     "frontend-developer": "Frontend Entwickler",
     "based": "In Kärnten ansässig",
     "open-to-work": "Offen zu arbeiten",
     "remote-available": "Für Remote-Arbeit verfügbar"
+  },
+  "about-me": {
+    "location": "Ich lebe in Kärnten, Österreich, und bin bereits mit der Arbeit im Homeoffice vertraut. Ich bin offen für Remote-Arbeitsmöglichkeiten und würde auch einen Umzug für das passende Projekt in Betracht ziehen.",
+    "cognition": "Als Web-Frontend-Entwickler bin ich stets offen dafür, Neues zu lernen und meine Fähigkeiten kontinuierlich zu verbessern. Obwohl mein Schwerpunkt auf Webtechnologien liegt, konnte ich auch Erfahrungen in der App-Entwicklung mit Flutter und Kotlin sammeln - ein zusätzlicher Vorteil, der meinen technischen Horizont erweitert hat.",
+    "quality": "Ich arbeite detailorientiert, präzise und zuverlässig. Verantwortung nehme ich ernst und setze stets alles daran, mein Bestes zu geben. Bei der Lösung von Herausforderungen setze ich auf analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit, um effiziente und elegante Lösungen zu finden – und lerne dabei kontinuierlich aus jeder Erfahrung."
+  },
+  "projects": {
+    "little-reapers": "Ein hüpf-, renn- und wurffreudiges Spiel im objektorientierten Stil. Hilf dem kleinen Sensenmann dabei, Münzen und Giftfläschchen zu sammeln, um es mit verrückten Monstern aufzunehmen!",
+    "join": "Ein Aufgabenmanager im Kanban-Stil – ganz einfach Aufgaben per Drag-and-Drop erstellen, sortieren und mit Nutzern oder Kategorien versehen. So macht Organisation Spaß!",
+    "pokedex": "Eine liebevoll illustrierte Pokémon-Enzyklopädie, in der du allerhand Pokémon entdecken kannst. Stöbere nach Herzenslust, suche gezielt oder hol dir spannende Infos direkt aus der API!"
+  },
+  "references": {
+    "jm-quote": "Mit Tina zu arbeiten war eine echte Bereicherung - ihre Liebe zum Detail im Frontend und ihre strukturierte Herangehensweise haben unser Projekt enorm vorangebracht.",
+    "as-quote": "Tina ist nicht nur technisch stark, sondern auch eine tolle Teamplayerin - sie hat stets klare Kommunikation und kreative Lösungen eingebracht.",
+    "dk-quote": "Tina hat eine beeindruckende Fähigkeit, komplexe Designs präzise umzusetzen und gleichzeitig Performance und Usability im Blick zu behalten."
+  },
+  "imprint": {
+    "heading": "Impressum",
+    "info-about": "Informationen über den Diensteanbieter.",
+    "eu-dispute-heading": "U-Streitschlichtung",
+    "eu-dispute-copy-1": "Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter",
+    "eu-dispute-copy-2": "zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum. Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "image-credits-heading": "Bildernachweis",
+    "image-credits-copy": "Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt. Die Bilderrechte liegen bei: ",
+    "copyright": "Alle Texte sind urheberrechtlich geschützt.",
+    "source": "Quelle: Erstellt mit dem Impressum Generator von AdSimple"
   }
 }
