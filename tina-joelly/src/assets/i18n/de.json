@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "about-me": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte"
+  },
+  "hero-banner": {
+    "frontend-developer": "Frontend Entwickler",
+    "based": "In Kärnten ansässig",
+    "open-to-work": "Offen zu arbeiten",
+    "remote-available": "Für Remote-Arbeit verfügbar"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "about-me": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "hero-banner": {
+    "frontend-developer": "Frontend Developer",
+    "based": "Based in Carinthia",
+    "open-to-work": "Open to work",
+    "remote-available": "Available for remote work"
+  }
+}

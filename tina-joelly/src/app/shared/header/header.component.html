@@ -2,9 +2,18 @@
   <div class="menu-header">
     <div class="nav-items">
       <app-language-switch></app-language-switch>
-      <app-header-link title="About me" url="about-me"></app-header-link>
-      <app-header-link title="Skills" url="skills"></app-header-link>
-      <app-header-link title="Projects" url="projects"></app-header-link>
+      <app-header-link
+        title="{{ 'sections.about-me' }}"
+        url="about-me"
+      ></app-header-link>
+      <app-header-link
+        title="{{ 'sections.skills' }}"
+        url="skills"
+      ></app-header-link>
+      <app-header-link
+        title="{{ 'sections.projects' }}"
+        url="projects"
+      ></app-header-link>
     </div>
     <div class="header-logo"></div>
     <div class="mobile-header-logo"></div>

@@ -1,10 +1,36 @@
 import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PortfolioDataService {
-  constructor() {}
+  bannerSections: any[] = [];
+
+  constructor(private translate: TranslateService) {
+    setTimeout(() => this.initializeBannerSections());
+    this.translate.onLangChange.subscribe(() =>
+      this.initializeBannerSections()
+    );
+  }
+
+  initializeBannerSections() {
+    this.translate
+      .get([
+        'hero-banner.frontend-developer',
+        'hero-banner.based',
+        'hero-banner.open-to-work',
+        'hero-banner.remote-available',
+      ])
+      .subscribe((translations) => {
+        this.bannerSections = [
+          translations['hero-banner.frontend-developer'],
+          translations['hero-banner.based'],
+          translations['hero-banner.open-to-work'],
+          translations['hero-banner.remote-available'],
+        ];
+      });
+  }
 
   myDetailsList = [
     {
@@ -22,21 +48,6 @@ export class PortfolioDataService {
       description:
         'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and  collaboration.',
     },
-  ];
-
-  bannerSections = [
-    'Frontend Developer',
-    'Based in Carinthia',
-    'Open to work',
-    'Available for remote work',
-    'Frontend Developer',
-    'Based in Carinthia',
-    'Open to work',
-    'Available for remote work',
-    'Frontend Developer',
-    'Based in Carinthia',
-    'Open to work',
-    'Available for remote work',
   ];
 
   skillsList = [

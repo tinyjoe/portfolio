@@ -4,10 +4,17 @@ import { HeaderLinkComponent } from './header-link/header-link.component';
 import { LanguageSwitchComponent } from './language-switch/language-switch.component';
 import { MobileMenuDialogComponentComponent } from './mobile-menu-dialog-component/mobile-menu-dialog-component.component';
 import { MatDialog } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [MatSlideToggleModule, HeaderLinkComponent, LanguageSwitchComponent],
+  standalone: true,
+  imports: [
+    MatSlideToggleModule,
+    HeaderLinkComponent,
+    LanguageSwitchComponent,
+    TranslateModule,
+  ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss', '../../../styles.scss'],
 })
