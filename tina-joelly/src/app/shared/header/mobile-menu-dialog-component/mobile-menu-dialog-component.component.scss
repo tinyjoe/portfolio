@@ -1,0 +1,18 @@
+@import "colors";
+
+.menu-dialog {
+  display: flex;
+  flex-direction: column;
+  width: 218px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  background: linear-gradient(
+    55.22deg,
+    $darkgradient 36.26%,
+    $greengradient 93.28%
+  );
+}

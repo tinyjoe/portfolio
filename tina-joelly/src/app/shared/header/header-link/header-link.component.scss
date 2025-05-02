@@ -37,3 +37,21 @@
     }
   }
 }
+
+@media (max-width: 795px) {
+  .menu-item {
+    .hover-circle {
+      display: none;
+    }
+    &:hover {
+      .hover-circle {
+        display: none;
+      }
+    }
+    &:active {
+      .hover-circle {
+        display: none;
+      }
+    }
+  }
+}
