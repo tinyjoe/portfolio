@@ -2,25 +2,25 @@
   <form action="sendMail.php">
     <app-contact-input
       labelFor="fname"
-      label="What's your name?"
+      label="{{ 'form.name-label' | translate }}"
       inputId="fname"
       inputName="fullname"
-      placeholder="Your name goes here"
+      placeholder="{{ 'form.name-help' | translate }}"
     ></app-contact-input>
     <app-contact-input
       labelFor="mail"
-      label="What's your email?"
+      label="{{ 'form.mail-label' | translate }}"
       inputId="mail"
       inputName="email"
-      placeholder="youremail@email.com"
+      placeholder="{{ 'form.mail-help' | translate }}"
       regExPattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
     ></app-contact-input>
     <app-contact-input
       labelFor="message"
-      label="How can I help you?"
+      label="{{ 'form.message-label' | translate }}"
       inputId="message"
       inputName="message"
-      placeholder="Hello Tina, I am interested in..."
+      placeholder="{{ 'form.message-help' | translate }}"
     ></app-contact-input>
     <div class="privacy-check-item">
       <label class="privacy-checkbox">
@@ -28,13 +28,14 @@
         <span class="checkmark"></span>
       </label>
       <p class="small-print">
-        I've read the <a href="privacy-policy">privacy policy</a> and agree to
-        the processing of my data as outlined
+        {{ "form.legal-text-1" | translate }}
+        <a href="privacy-policy">{{ "general.privacy-policy" | translate }}</a>
+        {{ "form.legal-text-2" | translate }}
       </p>
     </div>
     <div class="submit-button-container">
       <app-main-button
-        title="Say hello ;)"
+        title="{{ 'form.hello' | translate }}"
         [buttonWidth]="'140px'"
       ></app-main-button>
     </div>

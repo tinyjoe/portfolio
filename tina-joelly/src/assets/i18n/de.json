@@ -2,7 +2,10 @@
   "general": {
     "austria": "Österreich",
     "phone": "Tel.",
-    "mail": "E-Mail"
+    "mail": "E-Mail",
+    "my-work": "Schau es dir an",
+    "contact-me": "Schreib mir",
+    "privacy-policy": "Datenschutzerklärung"
   },
   "sections": {
     "about-me": "Über mich",
@@ -18,19 +21,55 @@
     "remote-available": "Für Remote-Arbeit verfügbar"
   },
   "about-me": {
+    "who-i-am": "Wer bin ich",
+    "intro": "Hallo, ich bin Tina - ein kreativer Kopf auf dem Weg vom Design in die Entwicklung. Als Developer-Quereinsteiger, der den Übergang vom Design zur Entwicklung vollzieht, bin ich bereit, meine Leidenschaft und mein Talent für kreative Lösungen in Ihr Team einzubringen.",
     "location": "Ich lebe in Kärnten, Österreich, und bin bereits mit der Arbeit im Homeoffice vertraut. Ich bin offen für Remote-Arbeitsmöglichkeiten und würde auch einen Umzug für das passende Projekt in Betracht ziehen.",
     "cognition": "Als Web-Frontend-Entwickler bin ich stets offen dafür, Neues zu lernen und meine Fähigkeiten kontinuierlich zu verbessern. Obwohl mein Schwerpunkt auf Webtechnologien liegt, konnte ich auch Erfahrungen in der App-Entwicklung mit Flutter und Kotlin sammeln - ein zusätzlicher Vorteil, der meinen technischen Horizont erweitert hat.",
     "quality": "Ich arbeite detailorientiert, präzise und zuverlässig. Verantwortung nehme ich ernst und setze stets alles daran, mein Bestes zu geben. Bei der Lösung von Herausforderungen setze ich auf analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit, um effiziente und elegante Lösungen zu finden – und lerne dabei kontinuierlich aus jeder Erfahrung."
   },
+  "skills": {
+    "technologies": "Technologien",
+    "skillset": "Fähigkeiten",
+    "intro": "Ich bin Frontend-Entwicklerin mit Erfahrung in HTML, CSS, JavaScript, Angular und Git. Ich freue mich darauf, neue Technologien zu entdecken und habe auch mit REST-APIs, Firebase, Flutter, Kotlin und Java gearbeitet. Es ist mir wichtig, in der schnelllebigen Welt der Webentwicklung stets auf dem neuesten Stand zu bleiben und aktiv dazuzulernen.",
+    "you-need": "Du benötigst",
+    "another-skill": "weitere Fähigkeiten?",
+    "contact-me": "Du kannst mich gerne kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+    "lets-talk": "Lass uns reden"
+  },
   "projects": {
+    "title": "Ausgewählte Projekte",
+    "subline": "Entdecke hier eine Auswahl meiner Arbeiten - interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "what-project": "Worum geht es in diesem Projekt?",
+    "next-project": "Nächstes Projekt",
     "little-reapers": "Ein hüpf-, renn- und wurffreudiges Spiel im objektorientierten Stil. Hilf dem kleinen Sensenmann dabei, Münzen und Giftfläschchen zu sammeln, um es mit verrückten Monstern aufzunehmen!",
-    "join": "Ein Aufgabenmanager im Kanban-Stil – ganz einfach Aufgaben per Drag-and-Drop erstellen, sortieren und mit Nutzern oder Kategorien versehen. So macht Organisation Spaß!",
+    "join": "Ein Aufgabenmanager im Kanban-Stil - ganz einfach Aufgaben per Drag-and-Drop erstellen, sortieren und mit Nutzern oder Kategorien versehen. So macht Organisation Spaß!",
     "pokedex": "Eine liebevoll illustrierte Pokémon-Enzyklopädie, in der du allerhand Pokémon entdecken kannst. Stöbere nach Herzenslust, suche gezielt oder hol dir spannende Infos direkt aus der API!"
   },
   "references": {
     "jm-quote": "Mit Tina zu arbeiten war eine echte Bereicherung - ihre Liebe zum Detail im Frontend und ihre strukturierte Herangehensweise haben unser Projekt enorm vorangebracht.",
     "as-quote": "Tina ist nicht nur technisch stark, sondern auch eine tolle Teamplayerin - sie hat stets klare Kommunikation und kreative Lösungen eingebracht.",
     "dk-quote": "Tina hat eine beeindruckende Fähigkeit, komplexe Designs präzise umzusetzen und gleichzeitig Performance und Usability im Blick zu behalten."
+  },
+  "contact": {
+    "title": "Lass uns arbeiten",
+    "problem-to-solve": "Du hast ein Problem zu lösen?",
+    "copy": "Melde dich gerne - ich freue mich darauf, mit dir in Kontakt zu treten und darüber zu sprechen, wie ich zu deinen Projekten beitragen kann! Besonders interessiere ich mich für Frontend-Entwicklerrollen und bin begeistert, meine Fähigkeiten in Webdesign und Programmierung einzubringen, um innovative, benutzerfreundliche Lösungen zu schaffen.",
+    "developer-needed": "Du brauchst einen Frontend Entwickler?"
+  },
+  "form": {
+    "name-label": "Wie lautet dein Name?",
+    "name-help": "Dein Name kommt hier hin",
+    "name-error": "Oops! Dein Name scheint zu fehlen",
+    "mail-label": "Wie lautet deine E-Mail?",
+    "mail-help": "youremail@email.com",
+    "mail-error": "Hoppla! Deine E-Mail ist verpflichtend",
+    "message-label": "Wie kann ich dir helfen?",
+    "message-help": "Hallo Tina, ich bin interessiert an...",
+    "message-error": "Was soll programmiert werden?",
+    "legal-text-1": "Ich habe die ",
+    "legal-text-2": "gelesen und akzeptiere die Verarbeitung meiner angegebenen Daten",
+    "legal-error": "Bitte akzeptiere die Datenschutzerklärung",
+    "hello": "Sag Hallo ;)"
   },
   "imprint": {
     "heading": "Impressum",

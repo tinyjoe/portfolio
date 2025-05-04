@@ -1,21 +1,21 @@
 <section id="skills">
   <div class="skills-content">
     <div class="skill-card-container">
-      <p class="column-title">Technologies</p>
+      <p class="column-title">{{ "skills.technologies" | translate }}</p>
       <app-details-card
-        title="Skillset"
-        description="A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development."
+        title="{{ 'skills.skillset' | translate }}"
+        description="{{ 'skills.intro' | translate }}"
       >
         <div>
-          <h4>You need <span>another skill?</span></h4>
-          <p class="small-print">
-            Feel free to contact me. I look forward to expanding on my previous
-            knowledge.
-          </p>
+          <h4>
+            {{ "skills.you-need" | translate }}
+            <span>{{ "skills.another-skill" | translate }}</span>
+          </h4>
+          <p class="small-print">{{ "skills.contact-me" | translate }}</p>
         </div>
         <app-main-button
-          title="Let's talk"
-          [buttonWidth]="'125px'"
+          title="{{ 'skills.lets-talk' | translate }}"
+          [buttonWidth]="'180px'"
           [onClick]="navigateToContactForm"
         ></app-main-button>
       </app-details-card>

@@ -2,7 +2,10 @@
   "general": {
     "austria": "Austria",
     "phone": "Phone",
-    "mail": "Email"
+    "mail": "Email",
+    "my-work": "Check my work",
+    "contact-me": "Contact me",
+    "privacy-policy": "Privacy Policy"
   },
   "sections": {
     "about-me": "About me",
@@ -18,11 +21,26 @@
     "remote-available": "Available for remote work"
   },
   "about-me": {
+    "who-i-am": "Who I am",
+    "intro": "Hi, I'm Tina - a creative mind transitioning from design to development. As a career changer, I bring a trained eye for aesthetics along with a growing passion for coding. Whether it's frontend or backend, web or app, I'm curious, eager to learn, and excited to contribute to creative and meaningful solutions.",
     "location": "I'm based in Carinthia, Austria, and I'm already well accustomed to remote work. I'm open to remote opportunities and would also consider relocating for the right project.",
     "cognition": "As a web frontend developer, I'm always open to learning new things and continuously refining my skills. While my main focus is on web technologies, I've also gained experience in app development with Flutter and Kotlin, which has further broadened my perspective and technical versatility.",
     "quality": "I'm detail-oriented, precise, and reliable. I take my responsibilities seriously and always strive to give my best. When approaching a challenge, I rely on analytical thinking, creativity, persistence, and collaboration to find the most efficient and elegant solution — and I make it a point to learn from every experience."
   },
+  "skills": {
+    "technologies": "Technologies",
+    "skillset": "Skillset",
+    "intro": "I'm a frontend developer with experience in HTML, CSS, JavaScript, Angular, and Git. I enjoy exploring new technologies and have also worked with REST APIs, Firebase, Flutter, Kotlin, and Java. Staying up to date in the fast-paced world of web development is something I value and actively pursue.",
+    "you-need": "You need",
+    "another-skill": "another skill?",
+    "contact-me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "lets-talk": "Let's have a talk"
+  },
   "projects": {
+    "title": "Featured Projects",
+    "subline": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "what-project": "What is this project about?",
+    "next-project": "Next project",
     "little-reapers": "Jump, run and throw game based on object-oriented approach. Help the little reaper to find coins and poison bottles to fight against the crazy monsters.",
     "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "pokedex": "An illustrated Pokémon Encyclopedia, where you can find all sorts of Pokémon. You can also search for specific ones or view some detailed information from an API."
@@ -31,6 +49,27 @@
     "jm-quote": "Working with Tina was a real asset - her attention to detail and structured approach pushed our project forward significantly.",
     "as-quote": "Tina is not only technically skilled but also a great team player - always bringing clear communication and creative solutions.",
     "dk-quote": "Tina has an impressive ability to translate complex designs precisely while keeping performance and usability in focus."
+  },
+  "contact": {
+    "title": "Let's work together",
+    "problem-to-solve": "Got a problem to solve?",
+    "copy": "Feel free to reach out - I'd love to connect and discuss how I can contribute to your projects! I'm particularly interested in frontend development roles and am excited to bring my skills in web design and coding to create innovative, user-friendly solutions",
+    "developer-needed": "Need a Frontend Developer?"
+  },
+  "form": {
+    "name-label": "What's your name?",
+    "name-help": "Your name goes here",
+    "name-error": "Oops! It seems your name is missing",
+    "mail-label": "What's your email?",
+    "mail-help": "youremail@email.com",
+    "mail-error": "Hoppla! Your email is required",
+    "message-label": "How can I help you?",
+    "message-help": "Hello Tina, I am interested in...",
+    "message-error": "What do you need to develop?",
+    "legal-text-1": "I've read the",
+    "legal-text-2": "and agree to the processing of my data as outlined",
+    "legal-error": "Please accept the privacy policy",
+    "hello": "Say hello ;)"
   },
   "imprint": {
     "heading": "Legal Notice",

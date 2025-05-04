@@ -7,16 +7,16 @@
       <div class="vertical-line"></div>
     </div>
     <div class="title-container">
-      <h3>Frontend Developer</h3>
+      <h3>{{ "hero-banner.frontend-developer" | translate }}</h3>
       <h1>Tina Jölly</h1>
       <div>
         <app-main-button
-          title="Check my work"
+          title="{{ 'general.my-work' | translate }}"
           [onClick]="navigateToWork"
           [buttonWidth]="'175px'"
         ></app-main-button>
         <app-main-button
-          title="Contact me"
+          title="{{ 'general.contact-me' | translate }}"
           [onClick]="navigateToContactForm"
           [buttonWidth]="'148px'"
         ></app-main-button>

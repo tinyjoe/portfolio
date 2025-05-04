@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProjectDemoButtonComponent } from '../project-demo-button/project-demo-button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-dialog',
   standalone: true,
-  imports: [CommonModule, ProjectDemoButtonComponent],
+  imports: [CommonModule, ProjectDemoButtonComponent, TranslateModule],
   templateUrl: './project-dialog.component.html',
   styleUrl: './project-dialog.component.scss',
 })

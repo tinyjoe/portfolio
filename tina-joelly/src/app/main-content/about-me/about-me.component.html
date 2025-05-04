@@ -5,10 +5,10 @@
       <img class="main-img-hover" src="/assets/img/main-img-hover.png" />
     </div>
     <div class="my-details-container">
-      <p class="column-title">Who I am</p>
+      <p class="column-title">{{ "about-me.who-i-am" | translate }}</p>
       <app-details-card
-        title="About me"
-        description="Hey there, I'm Lukas! Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?"
+        title="{{ 'sections.about-me' | translate }}"
+        description="{{ 'about-me.intro' | translate }}"
       >
         <ng-container *ngFor="let item of myDetailsData.myDetailsList">
           <app-detail-icon-item

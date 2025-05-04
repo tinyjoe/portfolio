@@ -2,8 +2,10 @@
   <div class="footer-content">
     <div class="footer-column">
       <div class="footer-logo"></div>
-      <p class="small-print">Webdeveloper</p>
-      <p class="small-print">Klagenfurt Austria</p>
+      <p class="small-print">
+        {{ "hero-banner.frontend-developer" | translate }}
+      </p>
+      <p class="small-print">Klagenfurt, {{ "general.austria" | translate }}</p>
     </div>
     <div class="footer-column hidden-mobile">
       <p class="copyright">© Tina Jölly 2025</p>
@@ -21,7 +23,10 @@
         title="tina_joelly@gmx.at"
         url="mailto:tina_joelly@gmx.at"
       ></app-footer-link>
-      <app-footer-link title="Legal Notice" url="imprint"></app-footer-link>
+      <app-footer-link
+        title="{{ 'imprint.heading' | translate }}"
+        url="imprint"
+      ></app-footer-link>
     </div>
   </div>
   <div class="footer-column hidden-desktop">

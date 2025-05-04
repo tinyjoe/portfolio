@@ -1,6 +1,15 @@
 <div class="menu-dialog">
-  <app-header-link title="About me" url="about-me"></app-header-link>
-  <app-header-link title="Skills" url="skills"></app-header-link>
-  <app-header-link title="Projects" url="projects"></app-header-link>
+  <app-header-link
+    title="{{ 'sections.about-me' | translate }}"
+    url="about-me"
+  ></app-header-link>
+  <app-header-link
+    title="{{ 'sections.skills' | translate }}"
+    url="skills"
+  ></app-header-link>
+  <app-header-link
+    title="{{ 'sections.projects' | translate }}"
+    url="projects"
+  ></app-header-link>
   <app-language-switch></app-language-switch>
 </div>
