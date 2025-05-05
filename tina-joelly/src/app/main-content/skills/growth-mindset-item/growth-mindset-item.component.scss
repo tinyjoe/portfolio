@@ -27,7 +27,7 @@
     text-align: center !important;
   }
 
-  .mindset-hover,
+  .hidden,
   .mindset-content,
   .mindset-item {
     display: none;
@@ -35,6 +35,9 @@
   &:hover {
     .subline {
       color: $primary;
+    }
+    .hidden {
+      display: block !important;
     }
     .mindset-hover {
       width: 180px;
@@ -75,11 +78,6 @@
 
     .subline {
       font-size: 16px;
-    }
-    &:hover {
-      .mindset-hover {
-        display: none !important;
-      }
     }
   }
 }

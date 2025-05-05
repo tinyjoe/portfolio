@@ -1,1 +1,46 @@
-<p>imprint works!</p>
+<section>
+  <div class="imprint-container">
+    <div class="back-icon" (click)="navigateBack()"></div>
+    <div class="imprint-content">
+      <h2>{{ "imprint.heading" | translate }}</h2>
+
+      <div>
+        <p>{{ "imprint.info-about" | translate }}</p>
+        <br />
+        <p>Tina Jölly</p>
+        <p>Birkenweg 9</p>
+        <p>9020 Klagenfurt</p>
+        <p>{{ "general.austria" | translate }}</p>
+        <p>{{ "general.phone" | translate }}<span>: 0664 126 88 77</span></p>
+        <p>
+          {{ "general.mail" | translate }}:
+          <a href="mailto:tina_joelly@gmx.at">tina_joelly&#64;gmx.at</a>
+        </p>
+      </div>
+
+      <div>
+        <h4>{{ "imprint.eu-dispute-heading" | translate }}</h4>
+        <p>
+          {{ "imprint.eu-dispute-copy-1" | translate }}
+          <a
+            href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE"
+            >https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE</a
+          >
+          {{ "imprint.eu-dispute-copy-2" | translate }}
+        </p>
+      </div>
+
+      <div>
+        <h4>{{ "imprint.image-credits-heading" | translate }}</h4>
+        <p>{{ "imprint.image-credits-copy" | translate }}</p>
+        <p>mountX</p>
+        <p>Pixabay</p>
+      </div>
+
+      <div>
+        <p>{{ "imprint.copyright" | translate }}</p>
+        <p class="small-print">{{ "imprint.source" | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class FooterLinkComponent {
   @Input() title: string = '';
   @Input() url: string = '';
+  @Input() target: string = '';
 }

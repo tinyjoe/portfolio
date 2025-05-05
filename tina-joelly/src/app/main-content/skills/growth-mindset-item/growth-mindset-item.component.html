@@ -1,5 +1,5 @@
 <div class="mindset-item-container">
-  <div class="mindset-hover">
+  <div id="mindset-hover" class="mindset-hover hidden">
     <p class="small-print colored">I have special interest in learning</p>
     <div class="mindset-content">
       <div class="mindset-item">
@@ -12,6 +12,10 @@
       </div>
     </div>
   </div>
-  <img class="mindset-icon" src="/assets/img/skills_icons/GrowthMindset.png" />
+  <img
+    class="mindset-icon"
+    (click)="showHoverItem()"
+    src="/assets/img/skills_icons/GrowthMindset.png"
+  />
   <p class="subline">Growth mindset</p>
 </div>
