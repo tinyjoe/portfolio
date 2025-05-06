@@ -5,10 +5,10 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 20px;
   top: 0;
   height: 100vh;
   padding: 0px 100px;
+  z-index: 90;
   overflow: hidden;
   background-color: $darkgradient;
   background: linear-gradient(
@@ -28,6 +28,7 @@ section {
 
 .title-container {
   display: flex;
+  flex: 6;
   height: 100vh;
   flex-direction: column;
   align-items: center;
@@ -36,7 +37,9 @@ section {
 
 .side-container {
   display: flex;
+  flex: 1;
   height: 100vh;
+  width: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -106,6 +109,10 @@ section {
   }
 }
 
+.hero-mail-mobile {
+  display: none;
+}
+
 .hero-circle {
   width: 8px;
   height: 8px;
@@ -124,7 +131,6 @@ section {
   font-weight: 400;
   font-size: 18px;
   text-decoration: none;
-  line-height: 120%;
   letter-spacing: 0%;
   color: white;
   margin-bottom: 75px;
@@ -138,10 +144,133 @@ section {
   }
 }
 
+.hero-button-row,
 div {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
   gap: 40px;
+}
+
+.mobile-bottom-container {
+  display: none;
+}
+
+.hero-mail-mobile {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-image: url("/assets/img/icons/mail-hero.png");
+  &:hover {
+    background-image: url("/assets/img/icons/mail-hero-hover.png");
+  }
+}
+
+@media (max-width: 1440px) {
+  section {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 1280px) {
+  section {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 0 40px;
+  }
+
+  .title-container {
+    flex: 10;
+  }
+}
+
+@media (max-width: 795px) {
+  section {
+    padding: 0 30px;
+  }
+
+  .hero-content {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 200px;
+    gap: 20px;
+  }
+
+  .side-container {
+    display: none;
+  }
+
+  .hero-button-row {
+    gap: 20px;
+  }
+
+  .mobile-bottom-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .mobile-side-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .vertical-line {
+    border-left: solid 1px $primary;
+    height: 180px;
+  }
+
+  .vertical-line-white {
+    border-left: solid 1px white;
+    height: 110px;
+  }
+}
+
+@media (max-width: 660px) {
+  section {
+    padding: 0 23px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-button-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+
+    .title-container {
+      padding-top: 150px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 0 15px;
+  }
 }

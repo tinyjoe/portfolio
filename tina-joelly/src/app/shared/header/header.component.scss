@@ -6,10 +6,20 @@ section {
   justify-content: center;
   height: 98px;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+}
+
+.scroll-background {
+  height: 98px;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $darkgradient;
 }
 
 ::ng-deep .menu-dialog-container {

@@ -51,3 +51,36 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 1000px) {
+  .banner-container {
+    bottom: 40px;
+    padding: 15px;
+  }
+
+  .wrapper {
+    gap: 40px;
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 795px) {
+  .banner-container {
+    bottom: 30px;
+    padding: 15px;
+  }
+
+  .wrapper {
+    gap: 40px;
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .divider-circle {
+    width: 5px;
+    height: 5px;
+  }
+}

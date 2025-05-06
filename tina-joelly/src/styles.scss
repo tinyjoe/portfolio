@@ -108,6 +108,22 @@ p {
   letter-spacing: 0%;
 }
 
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 115px;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 795px) {
   .small-print {
     font-size: 15px;
@@ -119,6 +135,24 @@ p {
 
   p {
     font-size: 17px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 660px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 25px;
   }
 }
 
@@ -143,5 +177,13 @@ p {
 @media (max-width: 350px) {
   h2 {
     font-size: 45px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 }

@@ -9,7 +9,7 @@
     <div class="title-container">
       <h3>{{ "hero-banner.frontend-developer" | translate }}</h3>
       <h1>Tina Jölly</h1>
-      <div>
+      <div class="hero-button-row">
         <app-main-button
           title="{{ 'general.my-work' | translate }}"
           [onClick]="navigateToWork"
@@ -45,6 +45,41 @@
         </div>
       </a>
       <div class="vertical-line-white"></div>
+    </div>
+    <div class="mobile-bottom-container">
+      <div class="mobile-side-container">
+        <div class="scroll-down-btn">
+          <img src="/assets/img/icons/arrow_down.png" />
+        </div>
+        <div class="vertical-line"></div>
+      </div>
+      <div class="mobile-side-container">
+        <a href="mailto:tina_joelly@gmx.at"
+          ><div class="hero-icon">
+            <div class="hero-mail-mobile"></div>
+            <div class="hero-circle"></div>
+          </div>
+        </a>
+        <a
+          href="https://github.com/tinyjoe"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div class="hero-icon">
+            <div class="hero-github"></div>
+            <div class="hero-circle"></div>
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/tina-joelly/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div class="hero-icon">
+            <div class="hero-linkedin"></div>
+            <div class="hero-circle"></div>
+          </div>
+        </a>
+        <div class="vertical-line-white"></div>
+      </div>
     </div>
   </div>
   <app-hero-banner></app-hero-banner>
