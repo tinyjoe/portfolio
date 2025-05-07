@@ -10,6 +10,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
+  backdrop-filter: blur(5px);
 }
 
 .scroll-background {
@@ -20,6 +21,7 @@ section {
   left: 0;
   right: 0;
   background-color: $darkgradient;
+  opacity: 0.3;
 }
 
 ::ng-deep .menu-dialog-container {

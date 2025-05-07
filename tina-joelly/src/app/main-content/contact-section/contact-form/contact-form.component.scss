@@ -1,13 +1,33 @@
 @import "colors";
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
 .privacy-check-item {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 50px 0px;
+  margin: 50px 0px 10px 0px;
   gap: 15px;
 }
 
+.legal-error {
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
+  p {
+    color: $error;
+  }
+}
 .privacy-checkbox {
   position: relative;
   display: inline-block;
@@ -70,5 +90,19 @@ a {
   &:hover {
     color: $primary;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 480px) {
+  a {
+    font-size: 14px;
+  }
+
+  .privacy-check-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0px 10px 0px;
+    gap: 30px;
   }
 }

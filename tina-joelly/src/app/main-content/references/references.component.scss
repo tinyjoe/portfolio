@@ -29,3 +29,22 @@ section {
   left: -370px;
   z-index: 300;
 }
+
+@media (max-width: 1000px) {
+  .references-hl {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 795px) {
+  .references-hl {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .references-hl {
+    font-size: 20px;
+    padding: 0px 15px;
+  }
+}

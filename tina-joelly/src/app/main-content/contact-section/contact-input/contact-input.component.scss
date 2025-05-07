@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 30px 25px 20px 25px;
   border-top: 1px solid $primary;
   border-bottom: 1px solid $primary;
   opacity: 0.8;
@@ -20,9 +19,11 @@ label {
   line-height: 120%;
   letter-spacing: 0%;
   color: $primary;
+  margin: 35px 25px 5px 25px;
 }
 
 input[type="text"] {
+  margin: 0px 25px 20px 25px;
   padding: 10px 0px;
   font-family: "Karla";
   font-weight: 400;
@@ -35,5 +36,33 @@ input[type="text"] {
   &:focus {
     border: none;
     outline: none;
+  }
+}
+
+@media (max-width: 795px) {
+  label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  label {
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  label {
+    font-size: 18px;
+    margin: 25px 20px 5px 20px;
+  }
+
+  input[type="text"] {
+    margin: 0px 20px 15px 20px;
+    font-size: 15px;
   }
 }

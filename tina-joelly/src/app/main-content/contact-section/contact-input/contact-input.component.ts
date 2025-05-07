@@ -14,4 +14,5 @@ export class ContactInputComponent {
   @Input() inputName: string = '';
   @Input() placeholder: string = '';
   @Input() regExPattern: string = '';
+  @Input() errorMessage: string = '';
 }

@@ -1,4 +1,4 @@
-<div>
+<div class="contact-form">
   <form action="sendMail.php">
     <app-contact-input
       labelFor="fname"
@@ -6,6 +6,7 @@
       inputId="fname"
       inputName="fullname"
       placeholder="{{ 'form.name-help' | translate }}"
+      errorMessage="{{ 'form.name-error' | translate }}"
     ></app-contact-input>
     <app-contact-input
       labelFor="mail"
@@ -13,6 +14,7 @@
       inputId="mail"
       inputName="email"
       placeholder="{{ 'form.mail-help' | translate }}"
+      errorMessage="{{ 'form.mail-error' | translate }}"
       regExPattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
     ></app-contact-input>
     <app-contact-input
@@ -21,10 +23,11 @@
       inputId="message"
       inputName="message"
       placeholder="{{ 'form.message-help' | translate }}"
+      errorMessage="{{ 'form.message-error' | translate }}"
     ></app-contact-input>
     <div class="privacy-check-item">
       <label class="privacy-checkbox">
-        <input type="checkbox" name="privacy-policy" />
+        <input type="checkbox" name="privacy-policy" value="isAccepted" />
         <span class="checkmark"></span>
       </label>
       <p class="small-print">
@@ -33,8 +36,14 @@
         {{ "form.legal-text-2" | translate }}
       </p>
     </div>
+    <div class="legal-error">
+      <p id="legal-error" class="small-print hidden">
+        {{ "form.legal-error" | translate }}
+      </p>
+    </div>
     <div class="submit-button-container">
       <app-main-button
+        [onClick]="testSubmit"
         title="{{ 'form.hello' | translate }}"
         [buttonWidth]="'140px'"
       ></app-main-button>

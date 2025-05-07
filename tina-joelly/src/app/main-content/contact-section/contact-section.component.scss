@@ -2,10 +2,9 @@
 
 section {
   display: flex;
-  height: 80vh;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 100px;
+  padding: 150px 100px 200px 100px;
 }
 
 .contact-section {
@@ -41,4 +40,63 @@ section {
 
 span {
   color: $primary;
+}
+
+@media (max-width: 1280px) {
+  section {
+    padding: 100px 80px 150px 80px;
+  }
+
+  .contact-intro-container {
+    width: 45%;
+  }
+
+  .contact-form-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    padding: 100px 60px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .contact-intro-container {
+    width: 90%;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 880px) {
+  section {
+    padding: 100px 40px;
+  }
+}
+
+@media (max-width: 795px) {
+  section {
+    padding: 100px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 100px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 80px 15px;
+  }
 }

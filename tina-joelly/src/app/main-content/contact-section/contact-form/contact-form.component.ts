@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ContactInputComponent } from '../contact-input/contact-input.component';
 import { MainButtonComponent } from '../../../shared/main-button/main-button.component';
 import { HttpClient } from '@angular/common/http';
@@ -23,5 +23,43 @@ export class ContactFormComponent {
     name: '',
     email: '',
     message: '',
+    acceptedPolicy: false,
   };
+
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Do something
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log('This is a test');
+      ngForm.resetForm();
+    }
+  }
+
+  testSubmit() {
+    console.log('This is a test');
+  }
 }

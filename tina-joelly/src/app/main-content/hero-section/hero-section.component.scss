@@ -220,10 +220,14 @@ div {
     gap: 20px;
   }
 
+  .mobile-spacing {
+    flex: 2;
+  }
+
   .mobile-bottom-container {
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: space-between;
     justify-content: flex-end;
     position: absolute;
     bottom: 0;
@@ -253,6 +257,19 @@ div {
   section {
     padding: 0 23px;
   }
+
+  .hero-linkedin,
+  .hero-github,
+  .hero-mail-mobile {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+  }
+
+  .scroll-down-btn {
+    width: 25px;
+    height: 42px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -266,6 +283,12 @@ div {
     .title-container {
       padding-top: 150px;
     }
+  }
+}
+
+@media (max-height: 700px) {
+  .title-container {
+    padding-top: 90px;
   }
 }
 
