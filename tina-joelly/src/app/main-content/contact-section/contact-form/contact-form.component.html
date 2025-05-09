@@ -1,33 +1,54 @@
 <div class="contact-form">
-  <form action="sendMail.php">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <app-contact-input
       labelFor="fname"
       label="{{ 'form.name-label' | translate }}"
       inputId="fname"
       inputName="fullname"
+      [(ngModel)]="contactData.name"
+      name="fullname"
       placeholder="{{ 'form.name-help' | translate }}"
+      [required]="true"
+      [showErrors]="showErrors"
       errorMessage="{{ 'form.name-error' | translate }}"
-    ></app-contact-input>
+    >
+    </app-contact-input>
+
     <app-contact-input
       labelFor="mail"
       label="{{ 'form.mail-label' | translate }}"
       inputId="mail"
       inputName="email"
+      [(ngModel)]="contactData.email"
+      name="email"
       placeholder="{{ 'form.mail-help' | translate }}"
-      errorMessage="{{ 'form.mail-error' | translate }}"
+      [required]="true"
+      [showErrors]="showErrors"
       regExPattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+      errorMessage="{{ 'form.mail-error' | translate }}"
     ></app-contact-input>
+
     <app-contact-input
       labelFor="message"
       label="{{ 'form.message-label' | translate }}"
       inputId="message"
       inputName="message"
+      [required]="true"
+      [(ngModel)]="contactData.message"
+      name="message"
+      [showErrors]="showErrors"
       placeholder="{{ 'form.message-help' | translate }}"
       errorMessage="{{ 'form.message-error' | translate }}"
     ></app-contact-input>
+
     <div class="privacy-check-item">
       <label class="privacy-checkbox">
-        <input type="checkbox" name="privacy-policy" value="isAccepted" />
+        <input
+          type="checkbox"
+          name="privacy"
+          [(ngModel)]="contactData.acceptedPolicy"
+          required
+        />
         <span class="checkmark"></span>
       </label>
       <p class="small-print">
@@ -37,16 +58,19 @@
       </p>
     </div>
     <div class="legal-error">
-      <p id="legal-error" class="small-print hidden">
+      <p
+        id="legal-error"
+        class="small-print"
+        *ngIf="!contactData.acceptedPolicy && showErrors"
+      >
         {{ "form.legal-error" | translate }}
       </p>
     </div>
+
     <div class="submit-button-container">
-      <app-main-button
-        [onClick]="testSubmit"
-        title="{{ 'form.hello' | translate }}"
-        [buttonWidth]="'140px'"
-      ></app-main-button>
+      <button type="submit">
+        <p>{{ "form.hello" | translate }}</p>
+      </button>
     </div>
   </form>
 </div>

@@ -1,11 +1,19 @@
 <div class="input-container">
-  <label for="{{ labelFor }}">{{ label }}</label>
+  <label [for]="labelFor">{{ label }}</label>
   <input
-    type="text"
-    id="{{ inputId }}"
-    name="{{ inputName }}"
-    placeholder="{{ placeholder }}"
-    pattern="{{ regExPattern }}"
-    required
+    [id]="inputId"
+    [name]="inputName"
+    [placeholder]="
+      (showErrors || inputRef.touched) && inputRef.invalid
+        ? errorMessage
+        : placeholder
+    "
+    [ngClass]="{
+      invalid: (showErrors || inputRef.touched) && inputRef.invalid
+    }"
+    [pattern]="regExPattern"
+    [required]="required"
+    [(ngModel)]="model"
+    #inputRef="ngModel"
   />
 </div>
