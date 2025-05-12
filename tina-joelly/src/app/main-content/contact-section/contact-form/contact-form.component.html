@@ -1,45 +1,48 @@
 <div class="contact-form">
   <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-    <app-contact-input
-      labelFor="fname"
-      label="{{ 'form.name-label' | translate }}"
-      inputId="fname"
-      inputName="fullname"
-      [(ngModel)]="contactData.name"
-      name="fullname"
-      placeholder="{{ 'form.name-help' | translate }}"
-      [required]="true"
-      [showErrors]="showErrors"
-      errorMessage="{{ 'form.name-error' | translate }}"
-    >
-    </app-contact-input>
+    <div class="input-container">
+      <label for="fname">{{ "form.name-label" | translate }}</label>
+      <input
+        type="text"
+        id="fname"
+        name="fullname"
+        [(ngModel)]="contactData.name"
+        required
+        [placeholder]="namePlaceholder"
+        [ngClass]="{ invalid: showErrors && !contactData.name }"
+      />
+    </div>
 
-    <app-contact-input
-      labelFor="mail"
-      label="{{ 'form.mail-label' | translate }}"
-      inputId="mail"
-      inputName="email"
-      [(ngModel)]="contactData.email"
-      name="email"
-      placeholder="{{ 'form.mail-help' | translate }}"
-      [required]="true"
-      [showErrors]="showErrors"
-      regExPattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-      errorMessage="{{ 'form.mail-error' | translate }}"
-    ></app-contact-input>
+    <div class="input-container">
+      <label for="mail">{{ "form.mail-label" | translate }}</label>
+      <input
+        type="email"
+        id="mail"
+        name="email"
+        [(ngModel)]="contactData.email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        [placeholder]="mailPlaceholder"
+        [ngClass]="{
+          invalid:
+            (showErrors && emailInvalid) || (contactData.email && emailInvalid)
+        }"
+        #emailRef="ngModel"
+      />
+    </div>
 
-    <app-contact-input
-      labelFor="message"
-      label="{{ 'form.message-label' | translate }}"
-      inputId="message"
-      inputName="message"
-      [required]="true"
-      [(ngModel)]="contactData.message"
-      name="message"
-      [showErrors]="showErrors"
-      placeholder="{{ 'form.message-help' | translate }}"
-      errorMessage="{{ 'form.message-error' | translate }}"
-    ></app-contact-input>
+    <div class="input-container">
+      <label for="message">{{ "form.message-label" | translate }}</label>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        [(ngModel)]="contactData.message"
+        required
+        [placeholder]="messagePlaceholder"
+        [ngClass]="{ invalid: showErrors && !contactData.message }"
+      />
+    </div>
 
     <div class="privacy-check-item">
       <label class="privacy-checkbox">
@@ -57,6 +60,7 @@
         {{ "form.legal-text-2" | translate }}
       </p>
     </div>
+
     <div class="legal-error">
       <p
         id="legal-error"

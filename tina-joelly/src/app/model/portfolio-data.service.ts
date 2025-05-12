@@ -103,7 +103,7 @@ export class PortfolioDataService {
             teaserImg: '/assets/img/mockups/little_reapers_intro.png',
             mockupImg: '/assets/img/mockups/little_reapers_detail.png',
             gitHubUrl: 'https://github.com/tinyjoe/little_reapers',
-            liveUrl: 'LiveUrl',
+            liveUrl: 'https://littlereapers.tina-joelly.at',
           },
           {
             title: 'Join',
@@ -133,7 +133,7 @@ export class PortfolioDataService {
             teaserImg: '/assets/img/mockups/join_intro.png',
             mockupImg: '/assets/img/mockups/join_detail.png',
             gitHubUrl: 'https://github.com/tinyjoe/join',
-            liveUrl: 'LiveUrl',
+            liveUrl: 'https://join.tina-joelly.at',
           },
           {
             title: 'Pokedex',
@@ -159,7 +159,7 @@ export class PortfolioDataService {
             teaserImg: '/assets/img/mockups/pokedex.png',
             mockupImg: '/assets/img/mockups/pokedex.png',
             gitHubUrl: 'https://github.com/tinyjoe/pokedex',
-            liveUrl: 'LiveUrl',
+            liveUrl: 'https://pokedex.tina-joelly.at',
           },
         ];
       });

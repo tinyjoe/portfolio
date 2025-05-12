@@ -1,18 +1,49 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { ContactInputComponent } from '../contact-input/contact-input.component';
 import { HttpClient } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [FormsModule, CommonModule, ContactInputComponent, TranslateModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
   http = inject(HttpClient);
+  translate = inject(TranslateService);
+
+  get namePlaceholder(): string {
+    if (this.showErrors && !this.contactData.name) {
+      return this.translate.instant('form.name-error');
+    } else {
+      return this.translate.instant('form.name-help');
+    }
+  }
+
+  get mailPlaceholder(): string {
+    if (this.showErrors && !this.contactData.email) {
+      return this.translate.instant('form.mail-error');
+    } else if (this.showErrors && this.contactData.email && this.emailInvalid) {
+      return this.translate.instant('form.mail-invalid');
+    } else {
+      return this.translate.instant('form.mail-help');
+    }
+  }
+
+  get messagePlaceholder(): string {
+    if (this.showErrors && !this.contactData.message) {
+      return this.translate.instant('form.message-error');
+    } else {
+      return this.translate.instant('form.message-help');
+    }
+  }
+
+  get emailInvalid(): boolean {
+    const pattern = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    return !pattern.test(this.contactData.email);
+  }
 
   contactData = {
     name: '',
@@ -25,7 +56,7 @@ export class ContactFormComponent {
   showErrors = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://tina-joelly.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -34,11 +65,6 @@ export class ContactFormComponent {
       },
     },
   };
-
-  get emailInvalid(): boolean {
-    const pattern = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-    return !pattern.test(this.contactData.email);
-  }
 
   onSubmit(ngForm: NgForm) {
     this.showErrors = true;
@@ -53,8 +79,7 @@ export class ContactFormComponent {
         });
     } else if (ngForm.valid && this.mailTest && !this.emailInvalid) {
       console.log('This is a test');
-      ngForm.reset();
-      ngForm.form.reset();
+      ngForm.resetForm();
       this.showErrors = false;
     } else {
       console.log('Form ist ungültig!');

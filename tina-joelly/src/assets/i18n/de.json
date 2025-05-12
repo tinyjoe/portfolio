@@ -63,6 +63,7 @@
     "mail-label": "Wie lautet deine E-Mail?",
     "mail-help": "youremail@email.com",
     "mail-error": "Hoppla! Deine E-Mail ist verpflichtend",
+    "mail-invalid": "Bitte gib eine korrekte E-Mail ein",
     "message-label": "Wie kann ich dir helfen?",
     "message-help": "Hallo Tina, ich bin interessiert an...",
     "message-error": "Was soll programmiert werden?",
