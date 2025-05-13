@@ -70,7 +70,8 @@
     "legal-text-1": "I've read the",
     "legal-text-2": "and agree to the processing of my data as outlined",
     "legal-error": "Please accept the privacy policy",
-    "hello": "Say hello ;)"
+    "hello": "Say hello ;)",
+    "success-message": "Thanks for the message! I will contact you soon!"
   },
   "imprint": {
     "heading": "Legal Notice",

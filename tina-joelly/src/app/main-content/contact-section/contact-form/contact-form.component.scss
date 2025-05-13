@@ -93,6 +93,19 @@ button {
       color: $primary !important;
     }
   }
+  &:disabled {
+    cursor: auto;
+    border: 1px solid $disabled;
+    p {
+      color: $disabled;
+    }
+    &:hover {
+      border: 1px solid $disabled;
+      p {
+        color: $disabled !important;
+      }
+    }
+  }
 }
 
 .privacy-checkbox {
@@ -157,6 +170,18 @@ a {
   &:hover {
     color: $primary;
     text-decoration: none;
+  }
+}
+
+.success-message {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  p {
+    color: $primary !important;
+    text-align: center;
   }
 }
 

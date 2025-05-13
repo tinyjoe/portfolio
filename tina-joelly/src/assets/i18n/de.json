@@ -70,7 +70,8 @@
     "legal-text-1": "Ich habe die ",
     "legal-text-2": "gelesen und akzeptiere die Verarbeitung meiner angegebenen Daten",
     "legal-error": "Bitte akzeptiere die Datenschutzerklärung",
-    "hello": "Sag Hallo ;)"
+    "hello": "Sag Hallo ;)",
+    "success-message": "Danke für deine Nachricht! Ich melde mich in Kürze."
   },
   "imprint": {
     "heading": "Impressum",

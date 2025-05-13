@@ -72,9 +72,13 @@
     </div>
 
     <div class="submit-button-container">
-      <button type="submit">
+      <button type="submit" [disabled]="!formValid">
         <p>{{ "form.hello" | translate }}</p>
       </button>
+    </div>
+
+    <div class="success-message" *ngIf="showSuccessMessage">
+      <p>{{ "form.success-message" | translate }}</p>
     </div>
   </form>
 </div>

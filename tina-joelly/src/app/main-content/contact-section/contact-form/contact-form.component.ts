@@ -45,6 +45,16 @@ export class ContactFormComponent {
     return !pattern.test(this.contactData.email);
   }
 
+  get formValid(): boolean {
+    return (
+      this.contactData.name != '' &&
+      this.contactData.email != '' &&
+      this.contactData.message != '' &&
+      this.contactData.acceptedPolicy &&
+      !this.emailInvalid
+    );
+  }
+
   contactData = {
     name: '',
     email: '',
@@ -52,8 +62,9 @@ export class ContactFormComponent {
     acceptedPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
   showErrors = false;
+  showSuccessMessage = false;
 
   post = {
     endPoint: 'https://tina-joelly.at/sendMail.php',
@@ -68,21 +79,30 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     this.showErrors = true;
-
-    if (ngForm.valid && !this.mailTest) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: () => ngForm.resetForm(),
-          error: (error) => console.error(error),
-          complete: () => console.info('send post complete'),
-        });
+    if (ngForm.valid && !this.mailTest && !this.emailInvalid) {
+      this.httpSubmit(ngForm);
     } else if (ngForm.valid && this.mailTest && !this.emailInvalid) {
       console.log('This is a test');
+      this.showSuccessMessage = true;
       ngForm.resetForm();
       this.showErrors = false;
     } else {
       console.log('Form ist ungültig!');
     }
+  }
+
+  private httpSubmit(ngForm: NgForm) {
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: () => {
+          this.showSuccessMessage = true;
+          console.log('Form valid');
+          ngForm.resetForm();
+          this.showErrors = false;
+        },
+        error: (error) => console.error(error),
+        complete: () => console.info('send post complete'),
+      });
   }
 }
