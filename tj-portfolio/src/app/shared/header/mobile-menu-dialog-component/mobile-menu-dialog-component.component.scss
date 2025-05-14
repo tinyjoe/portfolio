@@ -1,5 +1,21 @@
 @import "colors";
 
+::ng-deep .menu-dialog-container {
+  margin: 30px !important;
+  display: flex;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  background: linear-gradient(
+    55.22deg,
+    $darkgradient 36.26%,
+    $greengradient 93.28%
+  );
+  overflow: hidden;
+  @media (max-width: 480px) {
+    margin: 15px !important;
+  }
+}
+
 .menu-dialog {
   display: flex;
   flex-direction: column;

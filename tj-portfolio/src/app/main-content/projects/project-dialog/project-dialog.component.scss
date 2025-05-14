@@ -4,11 +4,17 @@
   display: flex;
   border-radius: 30px;
   border: 1px solid $primary;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
   background: linear-gradient(
     55.22deg,
     $darkgradient 36.26%,
     $greengradient 93.28%
   );
+  overflow: hidden;
 }
 
 .dialog-container {
@@ -19,6 +25,7 @@
   justify-content: space-between;
   gap: 30px;
   padding: 50px 75px;
+  background: #ffffff00;
   background: linear-gradient(
     55.22deg,
     $darkgradient 36.26%,
@@ -118,10 +125,11 @@
   height: 48px;
   padding: 0px;
   background-color: rgba(255, 255, 255, 0);
-  border: none;
+  border: none !important;
   cursor: pointer;
   background-image: url("/assets/img/icons/close.png");
   &:hover {
+    border: none;
     background-image: url("/assets/img/icons/close-hover.png");
   }
 }

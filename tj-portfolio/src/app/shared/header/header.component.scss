@@ -24,14 +24,6 @@ section {
   opacity: 0.3;
 }
 
-::ng-deep .menu-dialog-container {
-  width: 200px !important;
-  margin: 30px !important;
-  @media (max-width: 480px) {
-    margin: 15px !important;
-  }
-}
-
 .menu-header {
   display: flex;
   width: 100%;

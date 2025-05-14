@@ -7,26 +7,26 @@ import { MatDialog } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-header',
-    imports: [
-        MatSlideToggleModule,
-        HeaderLinkComponent,
-        LanguageSwitchComponent,
-        TranslateModule,
-    ],
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss', '../../../styles.scss']
+  selector: 'app-header',
+  imports: [
+    MatSlideToggleModule,
+    HeaderLinkComponent,
+    LanguageSwitchComponent,
+    TranslateModule,
+  ],
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss', '../../../styles.scss'],
 })
 export class HeaderComponent {
   constructor(private dialog: MatDialog) {}
 
   openMobileMenuDialog(): void {
     this.dialog.open(MobileMenuDialogComponentComponent, {
-      width: '200px',
+      width: '180px',
       maxWidth: '200px',
       position: {
-        top: '0',
-        right: '0',
+        top: '20',
+        right: '20',
       },
       panelClass: 'menu-dialog-container',
     });
