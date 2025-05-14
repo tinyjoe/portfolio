@@ -1,0 +1,84 @@
+<div class="contact-form">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="input-container">
+      <label for="fname">{{ "form.name-label" | translate }}</label>
+      <input
+        type="text"
+        id="fname"
+        name="fullname"
+        [(ngModel)]="contactData.name"
+        required
+        [placeholder]="namePlaceholder"
+        [ngClass]="{ invalid: showErrors && !contactData.name }"
+      />
+    </div>
+
+    <div class="input-container">
+      <label for="mail">{{ "form.mail-label" | translate }}</label>
+      <input
+        type="email"
+        id="mail"
+        name="email"
+        [(ngModel)]="contactData.email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        [placeholder]="mailPlaceholder"
+        [ngClass]="{
+          invalid:
+            (showErrors && emailInvalid) || (contactData.email && emailInvalid)
+        }"
+        #emailRef="ngModel"
+      />
+    </div>
+
+    <div class="input-container">
+      <label for="message">{{ "form.message-label" | translate }}</label>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        [(ngModel)]="contactData.message"
+        required
+        [placeholder]="messagePlaceholder"
+        [ngClass]="{ invalid: showErrors && !contactData.message }"
+      />
+    </div>
+
+    <div class="privacy-check-item">
+      <label class="privacy-checkbox">
+        <input
+          type="checkbox"
+          name="privacy"
+          [(ngModel)]="contactData.acceptedPolicy"
+          required
+        />
+        <span class="checkmark"></span>
+      </label>
+      <p class="small-print">
+        {{ "form.legal-text-1" | translate }}
+        <a href="privacy-policy">{{ "general.privacy-policy" | translate }}</a>
+        {{ "form.legal-text-2" | translate }}
+      </p>
+    </div>
+
+    <div class="legal-error">
+      <p
+        id="legal-error"
+        class="small-print"
+        *ngIf="!contactData.acceptedPolicy && showErrors"
+      >
+        {{ "form.legal-error" | translate }}
+      </p>
+    </div>
+
+    <div class="submit-button-container">
+      <button type="submit" [disabled]="!formValid">
+        <p>{{ "form.hello" | translate }}</p>
+      </button>
+    </div>
+
+    <div class="success-message" *ngIf="showSuccessMessage">
+      <p>{{ "form.success-message" | translate }}</p>
+    </div>
+  </form>
+</div>

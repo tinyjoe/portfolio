@@ -1,0 +1,38 @@
+@import "colors";
+
+button {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 100px;
+  padding: 10px 24px;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    border: 1px solid $primary;
+    .looping-text {
+      color: $primary !important;
+    }
+    .loop-wrapper {
+      animation: loopText 2.5s linear infinite;
+    }
+  }
+}
+
+.loop-wrapper {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.looping-text {
+  display: inline-block;
+  color: white;
+}
+
+@keyframes loopText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

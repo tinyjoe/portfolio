@@ -1,0 +1,201 @@
+$lightgrey: #d9d9d9;
+$background: #292929;
+$primary: #3dcfb6;
+$darkgradient: #1c1c1c;
+$greengradient: #08463b;
+
+* {
+  margin: 0px;
+}
+
+html {
+  background-color: $darkgradient;
+}
+
+h1 {
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 128px;
+  text-align: center;
+  color: $lightgrey;
+  letter-spacing: -2%;
+  line-height: 100%;
+}
+
+h2 {
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-size: 64px;
+  color: $primary;
+  letter-spacing: -3%;
+  line-height: 100%;
+}
+
+h3 {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  color: $lightgrey;
+  letter-spacing: 0%;
+  line-height: 100%;
+}
+
+h4 {
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+  span {
+    color: $primary;
+  }
+}
+
+h5 {
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: $primary;
+}
+
+p {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  color: $lightgrey;
+  letter-spacing: 0%;
+  line-height: 120%;
+}
+
+.column-title {
+  font-family: "Karla";
+  font-weight: 500;
+  font-size: 24px;
+  text-align: left;
+  color: $primary;
+  letter-spacing: 0%;
+  line-height: 100%;
+}
+
+.copyright {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: $primary;
+}
+
+.quote {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.small-print {
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 115px;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 795px) {
+  .small-print {
+    font-size: 15px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 660px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .small-print {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 45px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}

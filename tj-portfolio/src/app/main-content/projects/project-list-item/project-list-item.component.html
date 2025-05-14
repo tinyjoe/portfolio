@@ -1,0 +1,22 @@
+<div>
+  <div class="project-list-container" (click)="openProjectDialog()">
+    <div class="project-title-row">
+      <div class="project-title">
+        <h4>{{ project.title }}</h4>
+        <img src="/assets/img/icons/arrow_outward.png" />
+      </div>
+      <div class="tech-list">
+        <ng-container
+          *ngFor="let tech of project.technologies; let isLast = last"
+        >
+          <p>{{ tech.title }}</p>
+          <p *ngIf="!isLast" class="separator">|</p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="preview-container">
+    <div class="teaser-bg"></div>
+    <img class="teaser-img" src="{{ project.teaserImg }}" />
+  </div>
+</div>

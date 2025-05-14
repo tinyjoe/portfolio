@@ -1,0 +1,86 @@
+@import "colors";
+
+.banner-container {
+  rotate: -3deg;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: -30px;
+  right: 0px;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #3dcfb720;
+  backdrop-filter: blur(5.300000190734863px);
+  padding: 20px;
+  z-index: 300;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: loopingText 20s linear infinite;
+  gap: 50px;
+  p {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: $primary;
+    max-lines: 1;
+  }
+}
+
+.divider-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: $primary;
+}
+
+@keyframes loopingText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner-container {
+    bottom: 40px;
+    padding: 15px;
+  }
+
+  .wrapper {
+    gap: 40px;
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 795px) {
+  .banner-container {
+    bottom: 30px;
+    padding: 15px;
+  }
+
+  .wrapper {
+    gap: 40px;
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .divider-circle {
+    width: 5px;
+    height: 5px;
+  }
+}

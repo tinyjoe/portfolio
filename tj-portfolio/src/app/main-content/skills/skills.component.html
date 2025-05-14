@@ -1,0 +1,33 @@
+<section id="skills">
+  <div class="skills-content">
+    <div class="skill-card-container">
+      <p class="column-title">{{ "skills.technologies" | translate }}</p>
+      <app-details-card
+        title="{{ 'skills.skillset' | translate }}"
+        description="{{ 'skills.intro' | translate }}"
+      >
+        <div>
+          <h4>
+            {{ "skills.you-need" | translate }}
+            <span>{{ "skills.another-skill" | translate }}</span>
+          </h4>
+          <p class="small-print">{{ "skills.contact-me" | translate }}</p>
+        </div>
+        <app-main-button
+          title="{{ 'skills.lets-talk' | translate }}"
+          [buttonWidth]="'180px'"
+          [onClick]="navigateToContactForm"
+        ></app-main-button>
+      </app-details-card>
+    </div>
+    <div class="skill-items-container">
+      <ng-container *ngFor="let skill of skills.skillsList">
+        <app-skills-item
+          [iconUrl]="skill.iconUrl"
+          [title]="skill.title"
+        ></app-skills-item>
+      </ng-container>
+      <app-growth-mindset-item></app-growth-mindset-item>
+    </div>
+  </div>
+</section>

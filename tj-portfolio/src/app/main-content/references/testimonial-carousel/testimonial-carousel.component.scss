@@ -1,0 +1,225 @@
+@import "colors";
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.testimonial-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 650px;
+  height: 200px;
+  opacity: 0;
+  background-color: #3dcfb710;
+  border: 1px solid $primary;
+  border-radius: 32px;
+  padding: 48px 40px;
+  transition: all 0.5s ease;
+  transform: scale(0.8);
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+    left: 50%;
+    background-color: #3dcfb73f;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+    .quote-symbol {
+      position: absolute;
+      top: -30px;
+      left: -30px;
+    }
+  }
+
+  &.left {
+    opacity: 0.5;
+    transform: translateX(-110%) scale(0.8);
+    z-index: 2;
+    .quote-symbol {
+      display: none;
+    }
+  }
+
+  &.right {
+    opacity: 0.5;
+    transform: translateX(110%) scale(0.8);
+    z-index: 2;
+    .quote-symbol {
+      display: none;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.name-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: stretch;
+  gap: 10px;
+  .divider {
+    display: flex;
+    flex: 2;
+    background-color: white;
+    height: 1px;
+  }
+
+  p {
+    max-lines: 1;
+  }
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .arrow-left {
+    background: none;
+    background-image: url("/assets/img/icons/arrow-left.png");
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      background-image: url("/assets/img/icons/arrow-left-hover.png");
+    }
+  }
+
+  .arrow-right {
+    background: none;
+    background-image: url("/assets/img/icons/arrow-right.png");
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      background-image: url("/assets/img/icons/arrow-right-hover.png");
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 20px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: white;
+      cursor: pointer;
+
+      &.active {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .testimonial-card {
+    max-width: 600px;
+
+    &.left {
+      transform: translateX(-100%) scale(0.8);
+    }
+
+    &.right {
+      transform: translateX(100%) scale(0.8);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .testimonial-card {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 795px) {
+  .testimonial-card {
+    width: 50%;
+    max-width: 500px;
+    padding: 60px 30px 40px 30px;
+    height: 250px;
+    &.active {
+      .quote-symbol {
+        position: absolute;
+        top: -20px;
+        left: 0px;
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  .name-row {
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .testimonial-card {
+    width: 65%;
+    max-width: 550px;
+    &.left {
+      transform: translateX(-95%) scale(0.8);
+    }
+
+    &.right {
+      transform: translateX(95%) scale(0.8);
+    }
+  }
+
+  .name-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: stretch;
+    gap: 10px;
+    .divider {
+      display: flex;
+      flex: 1;
+      background-color: white;
+      height: 1px;
+    }
+
+    .name-container {
+      display: flex;
+      flex: 2;
+    }
+    p {
+      text-align: end;
+      max-lines: 2;
+    }
+  }
+}

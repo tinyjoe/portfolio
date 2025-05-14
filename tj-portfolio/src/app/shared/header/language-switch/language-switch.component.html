@@ -1,0 +1,16 @@
+<div class="switch">
+  <div
+    class="lang-option"
+    [class.active]="currentLang === 'en'"
+    (click)="changeLanguage('en')"
+  >
+    EN
+  </div>
+  <div
+    class="lang-option"
+    [class.active]="currentLang === 'de'"
+    (click)="changeLanguage('de')"
+  >
+    DE
+  </div>
+</div>
