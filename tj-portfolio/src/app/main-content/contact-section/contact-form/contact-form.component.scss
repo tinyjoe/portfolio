@@ -93,17 +93,18 @@ button {
       color: $primary !important;
     }
   }
-  &:disabled {
-    cursor: auto;
+}
+
+button.disabled {
+  cursor: auto;
+  border: 1px solid $disabled;
+  p {
+    color: $disabled;
+  }
+  &:hover {
     border: 1px solid $disabled;
     p {
-      color: $disabled;
-    }
-    &:hover {
-      border: 1px solid $disabled;
-      p {
-        color: $disabled !important;
-      }
+      color: $disabled !important;
     }
   }
 }

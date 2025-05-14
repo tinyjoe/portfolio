@@ -46,6 +46,15 @@ export class ContactFormComponent {
     return !pattern.test(this.contactData.email);
   }
 
+  get formEmpty(): boolean {
+    return (
+      this.contactData.name == '' &&
+      this.contactData.email == '' &&
+      this.contactData.message == '' &&
+      this.contactData.acceptedPolicy == false
+    );
+  }
+
   get formValid(): boolean {
     return (
       this.contactData.name != '' &&
@@ -63,7 +72,7 @@ export class ContactFormComponent {
     acceptedPolicy: false,
   };
 
-  mailTest = false;
+  mailTest = true;
   showErrors = false;
   showSuccessMessage = false;
 
@@ -83,12 +92,11 @@ export class ContactFormComponent {
     if (ngForm.valid && !this.mailTest && !this.emailInvalid) {
       this.httpSubmit(ngForm);
     } else if (ngForm.valid && this.mailTest && !this.emailInvalid) {
-      console.log('This is a test');
       this.showSuccessMessage = true;
       ngForm.resetForm();
       this.showErrors = false;
     } else {
-      console.log('Form ist ungültig!');
+      this.showErrors = true;
     }
   }
 
@@ -97,13 +105,11 @@ export class ContactFormComponent {
       .post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: () => {
-          this.showSuccessMessage = true;
-          console.log('Form valid');
           ngForm.resetForm();
           this.showErrors = false;
         },
         error: (error) => console.error(error),
-        complete: () => console.info('send post complete'),
+        complete: () => (this.showSuccessMessage = true),
       });
   }
 }
