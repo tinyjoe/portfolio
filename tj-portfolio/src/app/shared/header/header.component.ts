@@ -7,16 +7,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    MatSlideToggleModule,
-    HeaderLinkComponent,
-    LanguageSwitchComponent,
-    TranslateModule,
-  ],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss', '../../../styles.scss'],
+    selector: 'app-header',
+    imports: [
+        MatSlideToggleModule,
+        HeaderLinkComponent,
+        LanguageSwitchComponent,
+        TranslateModule,
+    ],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss', '../../../styles.scss']
 })
 export class HeaderComponent {
   constructor(private dialog: MatDialog) {}

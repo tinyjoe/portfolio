@@ -7,17 +7,16 @@ import { ReferencesComponent } from './references/references.component';
 import { SkillsComponent } from './skills/skills.component';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    HeroSectionComponent,
-    AboutMeComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ReferencesComponent,
-    ContactSectionComponent,
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    selector: 'app-main-content',
+    imports: [
+        HeroSectionComponent,
+        AboutMeComponent,
+        SkillsComponent,
+        ProjectsComponent,
+        ReferencesComponent,
+        ContactSectionComponent,
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {}

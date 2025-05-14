@@ -5,11 +5,10 @@ import { ProjectDemoButtonComponent } from '../project-demo-button/project-demo-
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-project-dialog',
-  standalone: true,
-  imports: [CommonModule, ProjectDemoButtonComponent, TranslateModule],
-  templateUrl: './project-dialog.component.html',
-  styleUrl: './project-dialog.component.scss',
+    selector: 'app-project-dialog',
+    imports: [CommonModule, ProjectDemoButtonComponent, TranslateModule],
+    templateUrl: './project-dialog.component.html',
+    styleUrl: './project-dialog.component.scss'
 })
 export class ProjectDialogComponent {
   currentIndex: number;

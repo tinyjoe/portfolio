@@ -4,11 +4,10 @@ import { Component, Input } from '@angular/core';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 @Component({
-  selector: 'app-project-list-item',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './project-list-item.component.html',
-  styleUrl: './project-list-item.component.scss',
+    selector: 'app-project-list-item',
+    imports: [CommonModule],
+    templateUrl: './project-list-item.component.html',
+    styleUrl: './project-list-item.component.scss'
 })
 export class ProjectListItemComponent {
   @Input() project: any;

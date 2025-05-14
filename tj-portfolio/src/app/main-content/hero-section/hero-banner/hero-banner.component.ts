@@ -3,11 +3,10 @@ import { PortfolioDataService } from '../../../model/portfolio-data.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-hero-banner',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './hero-banner.component.html',
-  styleUrl: './hero-banner.component.scss',
+    selector: 'app-hero-banner',
+    imports: [CommonModule],
+    templateUrl: './hero-banner.component.html',
+    styleUrl: './hero-banner.component.scss'
 })
 export class HeroBannerComponent {
   bannerTitles = inject(PortfolioDataService);

@@ -5,11 +5,10 @@ import { TestimonialCarouselComponent } from './testimonial-carousel/testimonial
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-references',
-  standalone: true,
-  imports: [CommonModule, TestimonialCarouselComponent, TranslateModule],
-  templateUrl: './references.component.html',
-  styleUrl: './references.component.scss',
+    selector: 'app-references',
+    imports: [CommonModule, TestimonialCarouselComponent, TranslateModule],
+    templateUrl: './references.component.html',
+    styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
   references = inject(PortfolioDataService);

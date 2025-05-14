@@ -6,16 +6,15 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [
-    CommonModule,
-    DetailsCardComponent,
-    DetailIconItemComponent,
-    TranslateModule,
-  ],
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss', '../../../styles.scss'],
+    selector: 'app-about-me',
+    imports: [
+        CommonModule,
+        DetailsCardComponent,
+        DetailIconItemComponent,
+        TranslateModule,
+    ],
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss', '../../../styles.scss']
 })
 export class AboutMeComponent {
   myDetailsData = inject(PortfolioDataService);

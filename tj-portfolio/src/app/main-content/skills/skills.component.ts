@@ -8,18 +8,17 @@ import { GrowthMindsetItemComponent } from './growth-mindset-item/growth-mindset
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [
-    CommonModule,
-    DetailsCardComponent,
-    SkillsItemComponent,
-    MainButtonComponent,
-    GrowthMindsetItemComponent,
-    TranslateModule,
-  ],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+    selector: 'app-skills',
+    imports: [
+        CommonModule,
+        DetailsCardComponent,
+        SkillsItemComponent,
+        MainButtonComponent,
+        GrowthMindsetItemComponent,
+        TranslateModule,
+    ],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   skills = inject(PortfolioDataService);

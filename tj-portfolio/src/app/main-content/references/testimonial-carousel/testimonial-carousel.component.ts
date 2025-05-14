@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-testimonial-carousel',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './testimonial-carousel.component.html',
-  styleUrl: './testimonial-carousel.component.scss',
+    selector: 'app-testimonial-carousel',
+    imports: [CommonModule],
+    templateUrl: './testimonial-carousel.component.html',
+    styleUrl: './testimonial-carousel.component.scss'
 })
 export class TestimonialCarouselComponent {
   @Input() refQuotes: { name: string; role: string; quote: string }[] = [];

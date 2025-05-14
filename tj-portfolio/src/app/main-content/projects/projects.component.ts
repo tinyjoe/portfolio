@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule, ProjectListItemComponent, TranslateModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
+    selector: 'app-projects',
+    imports: [CommonModule, ProjectListItemComponent, TranslateModule],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   projects = inject(PortfolioDataService);
