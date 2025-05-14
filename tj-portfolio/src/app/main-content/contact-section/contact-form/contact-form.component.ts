@@ -5,10 +5,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-contact-form',
-    imports: [FormsModule, CommonModule, TranslateModule],
-    templateUrl: './contact-form.component.html',
-    styleUrl: './contact-form.component.scss'
+  selector: 'app-contact-form',
+  imports: [FormsModule, CommonModule, TranslateModule],
+  templateUrl: './contact-form.component.html',
+  styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
   http = inject(HttpClient);
@@ -71,7 +71,7 @@ export class ContactFormComponent {
     acceptedPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
   showErrors = false;
   showSuccessMessage = false;
 
