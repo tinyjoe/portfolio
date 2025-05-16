@@ -7,7 +7,7 @@
   overflow: hidden;
   left: -30px;
   right: 0px;
-  bottom: 50px;
+  bottom: 70px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -54,7 +54,7 @@
 
 @media (max-width: 1000px) {
   .banner-container {
-    bottom: 40px;
+    bottom: 60px;
     padding: 15px;
   }
 
@@ -68,7 +68,7 @@
 
 @media (max-width: 795px) {
   .banner-container {
-    bottom: 30px;
+    bottom: 50px;
     padding: 15px;
   }
 

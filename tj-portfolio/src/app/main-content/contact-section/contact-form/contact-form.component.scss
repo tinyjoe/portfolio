@@ -51,6 +51,21 @@ input {
   }
 }
 
+::ng-deep input:-webkit-autofill {
+  background-color: $darkgradient !important;
+  border: none;
+  outline: none;
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white !important;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px $darkgradient inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 input.invalid::placeholder {
   color: $error;
 }
