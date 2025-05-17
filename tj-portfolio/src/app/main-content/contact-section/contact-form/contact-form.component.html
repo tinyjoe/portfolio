@@ -27,6 +27,7 @@
           invalid:
             (showErrors && emailInvalid) || (contactData.email && emailInvalid)
         }"
+        autocomplete="email"
         #emailRef="ngModel"
       />
     </div>
@@ -79,6 +80,10 @@
 
     <div class="success-message" *ngIf="showSuccessMessage">
       <p>{{ "form.success-message" | translate }}</p>
+    </div>
+
+    <div class="error-message" *ngIf="contactData.email && emailInvalid">
+      <p>{{ "form.mail-invalid" | translate }}</p>
     </div>
   </form>
 </div>

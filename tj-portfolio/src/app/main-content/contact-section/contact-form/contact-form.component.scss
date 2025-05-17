@@ -66,6 +66,12 @@ input {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+input:-webkit-autofill.invalid {
+  -webkit-box-shadow: 0 0 0 1000px $darkgradient inset;
+  color: $error !important;
+  -webkit-text-fill-color: $error !important;
+}
+
 input.invalid::placeholder {
   color: $error;
 }
@@ -197,6 +203,18 @@ a {
   margin-top: 20px;
   p {
     color: $primary !important;
+    text-align: center;
+  }
+}
+
+.error-message {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  p {
+    color: $error !important;
     text-align: center;
   }
 }
